@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "562343805951",
+    "firebase_url": "https://cravx-4b626.firebaseio.com",
+    "project_id": "cravx-4b626",
+    "storage_bucket": "cravx-4b626.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:562343805951:android:8f5c1732346b88958f9dca",
+        "android_client_info": {
+          "package_name": "com.astrika.checqk"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "562343805951-05pmj7u84bc798s7t3cm7slqko4qfc7o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBSzgZp2uWSc0EJUlcRipyhmwubt2RAC_E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "562343805951-05pmj7u84bc798s7t3cm7slqko4qfc7o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
