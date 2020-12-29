@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+
+        <variable
+            name="dayDTO"
+            type="com.astrika.checqk.model.DayDTO" />
+
+        <variable
+            name="discountDaysTimingDTO"
+            type="com.astrika.checqk.model.DiscountDaysTimingDTO" />
+
+        <variable
+            name="activity"
+            type="android.app.Activity" />
+
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/circular_rounded_corner_grey_background"
+        android:elevation="5dp"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:fontFamily="@font/air_bnb_cereal_book"
+                android:singleLine="true"
+                android:text="@{dayDTO.dayName}"
+                android:textColor="@color/colorBlack"
+                android:textSize="16sp"
+                tools:text="Monday" />
+
+
+            <TextView
+                android:id="@+id/add_time_slot_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_baseline_add_circle_24"
+                android:drawablePadding="5dp"
+                android:drawableTint="@color/colorPrimary"
+                android:fontFamily="@font/air_bnb_cereal_book"
+                android:gravity="center_vertical"
+                android:text="Add Slot"
+                android:textColor="@color/colorBlack"
+                android:visibility="@{dayDTO.allDaySameDiscountFlag ? View.GONE : View.VISIBLE}" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="@{dayDTO.allDaySameDiscountFlag ? View.GONE : View.VISIBLE}">
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/TextInputLayoutCommonStyle"
+                android:hint="Assured Discount">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    style="@style/EditTextCommonStyle"
+                    android:drawableEnd="@drawable/ic_discount_black"
+                    android:drawablePadding="5dp"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    android:singleLine="true"
+                    android:text="@={dayDTO.assuredDiscountString}" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                style="@style/errorTextStyle"
+                activity="@{activity}"
+                errorText="@{dayDTO.assuredDiscountErrorMsg}"
+                android:visibility="@{dayDTO.assuredDiscountErrorMsg.empty? View.GONE : View.VISIBLE}"
+                tools:text="Error" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="@{dayDTO.allDaySameDiscountFlag ? View.VISIBLE : View.GONE}">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/TextInputLayoutCommonStyle"
+                        android:hint="Assured Discount">
+
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/assured_discount_et"
+                            style="@style/EditTextCommonStyle"
+                            android:digits="@string/keyboard_validation_only_numbers"
+                            android:drawableEnd="@drawable/ic_discount_black"
+                            android:drawablePadding="5dp"
+                            android:inputType="number"
+                            android:maxLength="3"
+                            android:singleLine="true"
+                            android:text="@={discountDaysTimingDTO.assuredDiscountString}" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/TextInputLayoutCommonStyle"
+                        android:hint="Discount Applicable">
+
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/discount_applicable_et"
+                            style="@style/EditTextCommonStyle"
+                            android:digits="@string/keyboard_validation_only_numbers"
+                            android:drawableEnd="@drawable/ic_discount_black"
+                            android:drawablePadding="5dp"
+                            android:inputType="number"
+                            android:maxLength="3"
+                            android:singleLine="true"
+                            android:text="@={discountDaysTimingDTO.discountApplicableString}" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                style="@style/errorTextStyle"
+                activity="@{activity}"
+                errorText="@{discountDaysTimingDTO.discountApplicableErrorMsg}"
+                android:visibility="@{discountDaysTimingDTO.discountApplicableErrorMsg.empty? View.GONE : View.VISIBLE}"
+                tools:text="Error" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/TextInputLayoutCommonStyle"
+                android:hint="Complimentary Applicable">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/complimentary_et"
+                    style="@style/EditTextCommonStyle"
+                    android:drawableEnd="@drawable/ic_tray_black"
+                    android:drawablePadding="5dp"
+                    android:maxLength="50"
+                    android:singleLine="true"
+                    android:text="@={discountDaysTimingDTO.complimentaryApplicable}" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                style="@style/errorTextStyle"
+                activity="@{activity}"
+                errorText="@{discountDaysTimingDTO.complimentaryApplicableErrorMsg}"
+                android:visibility="@{discountDaysTimingDTO.complimentaryApplicableErrorMsg.empty? View.GONE : View.VISIBLE}"
+                tools:text="Error" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/TextInputLayoutCommonStyle"
+                android:hint="Terms &amp; Conditions here">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    style="@style/EditTextCommonStyle"
+                    android:drawableEnd="@drawable/ic_asterisk_black"
+                    android:drawablePadding="5dp"
+                    android:inputType="text"
+                    android:maxLength="400"
+                    android:maxLines="5"
+                    android:overScrollMode="always"
+                    android:scrollbars="vertical"
+                    android:singleLine="false"
+                    android:text="@={discountDaysTimingDTO.terms}"
+                    app:touchListener="@{true}" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </LinearLayout>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:scrollbars="none"
+            android:visibility="@{dayDTO.allDaySameDiscountFlag ? View.GONE : View.VISIBLE}">
+
+            <LinearLayout
+                android:id="@+id/discount_timing_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" />
+
+        </HorizontalScrollView>
+
+        <TextView
+            style="@style/errorTextStyle"
+            activity="@{activity}"
+            android:layout_marginTop="5dp"
+            errorText="@{dayDTO.discountTimingErrorMsg}"
+            android:visibility="@{dayDTO.discountTimingErrorMsg.empty? View.GONE : View.VISIBLE}"
+            tools:text="Error" />
+
+    </LinearLayout>
+
+</layout>
+
+

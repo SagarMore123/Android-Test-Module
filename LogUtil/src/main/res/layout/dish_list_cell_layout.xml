@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="dishDetails"
+            type="com.astrika.checqk.model.ProductDetailsDTO" />
+    </data>
+
+    <com.guanaj.easyswipemenulibrary.EasySwipeMenuLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:contentView="@id/content_layout"
+        app:rightMenuView="@id/right_layout"
+        android:layout_marginTop="3dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/content_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/drag_image_view"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_move"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:padding="6dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="5dp"/>
+
+            <ImageView
+                android:id="@+id/dish_image_view"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/background_white_with_border"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/drag_image_view"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="10dp"
+                app:imageUrl="@{dishDetails.productImage.path}"
+                />
+
+            <TextView
+                android:id="@+id/dish_name_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Prawns Biryani"
+                android:text="@{dishDetails.productName}"
+                android:textColor="@color/colorBlack"
+                android:fontFamily="@font/air_bnb_cereal_book"
+                app:layout_constraintStart_toEndOf="@+id/dish_image_view"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/dish_description_text_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                tools:text="Dish description"
+                android:text="@{dishDetails.productDesc}"
+                android:textColor="@color/colorBlack"
+                android:fontFamily="@font/air_bnb_cereal_book"
+                app:layout_constraintStart_toEndOf="@+id/dish_image_view"
+                app:layout_constraintTop_toBottomOf="@+id/dish_name_text_view"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:textSize="12dp"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:layout_marginTop="2dp"/>
+
+            <TextView
+                android:id="@+id/section1_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Evening Snacks"
+                android:fontFamily="@font/air_bnb_cereal_book"
+                app:layout_constraintStart_toEndOf="@+id/dish_image_view"
+                app:layout_constraintTop_toBottomOf="@+id/dish_description_text_view"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:paddingTop="1dp"
+                android:paddingBottom="1dp"
+                android:visibility="gone"
+                android:textColor="@color/random_grey_1"
+                android:background="@drawable/circular_rounded_corner_grey_background_with_grey_stroke"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"/>
+
+            <TextView
+                android:id="@+id/section2_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Food Menu"
+                android:text="Section 2"
+                android:fontFamily="@font/air_bnb_cereal_book"
+                app:layout_constraintStart_toEndOf="@+id/section1_text_view"
+                app:layout_constraintTop_toBottomOf="@+id/dish_description_text_view"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:paddingTop="1dp"
+                android:paddingBottom="1dp"
+                android:visibility="gone"
+                android:textColor="@color/random_grey_1"
+                android:background="@drawable/circular_rounded_corner_grey_background_with_grey_stroke"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"/>
+
+            <TextView
+                android:id="@+id/original_price_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/strike_through"
+                tools:text="200"
+                android:fontFamily="@font/air_bnb_cereal_book"
+                android:text="@{dishDetails.productOriPrice.toString()}"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:visibility="@{dishDetails.productDiscountPrice == 0 ? View.INVISIBLE : View.VISIBLE}"
+                android:layout_margin="10dp"/>
+
+            <TextView
+                android:id="@+id/discount_price_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="200"
+                android:fontFamily="@font/air_bnb_cereal_book"
+                android:text="@{dishDetails.productDiscountPrice == 0 ?  dishDetails.productOriPrice.toString() : dishDetails.productDiscountPrice.toString()}"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/original_price_text_view"
+                android:layout_margin="10dp"
+                android:textColor="@color/colorDashboardToolbar"/>
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_rupee"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="1dp"
+                android:padding="5dp"
+                app:layout_constraintEnd_toStartOf="@+id/discount_price_text_view"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:background="@drawable/dotted_line"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <RelativeLayout
+            android:id="@+id/right_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/colorDashboardToolbar">
+
+            <ImageView
+                android:id="@+id/edit_image_view"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_edit_pencile"
+                android:layout_centerVertical="true"
+                android:padding="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="10dp"
+                />
+
+            <ImageView
+                android:id="@+id/delete_image_view"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/ic_delete"
+                android:layout_centerVertical="true"
+                android:padding="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_toEndOf="@id/edit_image_view"/>
+
+        </RelativeLayout>
+
+    </com.guanaj.easyswipemenulibrary.EasySwipeMenuLayout>
+
+
+</layout>

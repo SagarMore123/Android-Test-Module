@@ -1,0 +1,782 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.astrika.checqk.view.dashboard.viewmodels.AddDishDialogViewModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/circular_rounded_corner_white_background"
+            android:minHeight="200dp">
+
+            <ImageView
+                android:id="@+id/close_dialog_image_view"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="10dp"
+                android:backgroundTint="@color/random_grey"
+                android:onClick="@{()-> viewModel.onCloseClick()}"
+                android:src="@drawable/ic_baseline_cancel_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/dish_info_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:text="@string/dish_info"
+                android:textColor="@color/colorBlack"
+                android:textSize="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/menu_category_edit_text"
+                style="@style/TextInputLayoutCommonStyle"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:hint="@string/menu_category_with_star"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/dish_info_txt">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    style="@style/EditTextCommonStyle"
+                    android:drawableEnd="@drawable/ic_keyboard_arrow_down_black_24dp"
+                    android:ellipsize="end"
+                    android:focusable="false"
+                    android:onClick="@{()-> viewModel.onMenuCategoryClick()}"
+                    android:singleLine="true"
+                    android:text="@{viewModel.selectedMenuCategoryList}"
+                    android:textSize="14dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/menu_section_edit_text"
+                style="@style/TextInputLayoutCommonStyle"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:hint="@string/menu_section_with_star"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/menu_category_edit_text">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    style="@style/EditTextCommonStyle"
+                    android:drawableEnd="@drawable/ic_keyboard_arrow_down_black_24dp"
+                    android:ellipsize="end"
+                    android:focusable="false"
+                    android:onClick="@{()-> viewModel.onMenuSectionClick()}"
+                    android:singleLine="true"
+                    android:text="@{viewModel.selectedMenuSectionList}"
+                    android:textSize="14dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageView
+                android:id="@+id/dish_image_view"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="20dp"
+                android:padding="3dp"
+                android:src="@drawable/images_placehoder"
+                app:imageUrl="@{viewModel.dishImageUrl}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/menu_section_edit_text" />
+
+            <RelativeLayout
+                android:id="@+id/image_upload_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/circular_rounded_corner_purple_background"
+                android:onClick="@{()-> viewModel.onFoodPhotoClick()}"
+                android:padding="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dish_image_view">
+
+                <TextView
+                    android:id="@+id/food_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:text="Food"
+                    android:textColor="@color/colorWhite" />
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_toRightOf="@+id/food_text_view"
+                    android:padding="1dp"
+                    android:src="@drawable/ic_upload" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/menu_category_error_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/upload_relevant_images"
+                android:textSize="11dp"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/image_upload_layout" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/dish_name_edit_text"
+                style="@style/TextInputLayoutCommonStyle"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:hint="@string/dish_name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/menu_category_error_text_view">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    style="@style/EditTextCommonStyle"
+                    android:singleLine="true"
+                    android:text="@={viewModel.productName}"
+                    android:textSize="14dp"
+                    tools:text="@string/dish_name" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- <EditText
+                 android:id="@+id/dish_name_edit_text"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 app:layout_constraintTop_toBottomOf="@+id/menu_category_error_text_view"
+                 app:layout_constraintStart_toStartOf="parent"
+                 android:layout_marginStart="20dp"
+                 android:layout_marginEnd="20dp"
+                 android:layout_marginTop="10dp"
+                 android:layout_marginBottom="20dp"
+                 android:textSize="12dp"
+                 android:textColor="@color/colorBlack"
+                 android:backgroundTint="@color/random_grey"
+                 android:hint="@string/dish_name"/>-->
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/dish_summery_edit_text"
+                style="@style/TextInputLayoutCommonStyle"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:hint="@string/dish_summary"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dish_name_edit_text">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    style="@style/EditTextCommonStyle"
+                    android:maxLines="2"
+                    android:singleLine="false"
+                    android:text="@={viewModel.dishDescription}"
+                    android:textSize="14dp"
+                    tools:text="@string/dish_summary" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <!--<EditText
+                android:id="@+id/dish_summery_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/dish_name_edit_text"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:textSize="12dp"
+                android:textColor="@color/colorBlack"
+                android:backgroundTint="@color/random_grey"
+                android:hint="@string/dish_summery"/>-->
+
+
+            <LinearLayout
+                android:id="@+id/price_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dish_summery_edit_text">
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/price_edit_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/price">
+
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        style="@style/EditTextCommonStyle"
+                        android:drawableEnd="@drawable/ic_rupees_black"
+                        android:inputType="number"
+                        android:singleLine="true"
+                        android:text="@={viewModel.dishOriginalPrice}"
+                        android:textSize="14dp"
+                        tools:text="@string/price" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/discounted_price_edit_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_weight="1"
+                    android:hint="@string/discounted_price">
+
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        style="@style/EditTextCommonStyle"
+                        android:drawableEnd="@drawable/ic_rupees_black"
+                        android:inputType="number"
+                        android:singleLine="true"
+                        android:text="@={viewModel.dishDiscountedPrice}"
+                        android:textSize="14dp"
+                        tools:text="@string/discounted_price" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/min_max_order_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/price_layout">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/min_order_edit_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/min_order">
+
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        style="@style/EditTextCommonStyle"
+                        android:inputType="number"
+                        android:singleLine="true"
+                        android:text="@={viewModel.minOrder}"
+                        android:textSize="14dp"
+                        tools:text="@string/min_order" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/max_order_edit_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_weight="1"
+                    android:hint="@string/max_order">
+
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        style="@style/EditTextCommonStyle"
+                        android:inputType="number"
+                        android:singleLine="true"
+                        android:text="@={viewModel.maxOrder}"
+                        android:textSize="14dp"
+                        tools:text="@string/max_order" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1.4dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/dotted_line"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/min_max_order_layout" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/dish_flag_recycler_view"
+                style="@style/BasicInfoRecyclerViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/min_max_order_layout" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/dotted_line"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dish_flag_recycler_view" />
+
+            <TextView
+                android:id="@+id/customization_info_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="@string/customization_info"
+                android:textAllCaps="true"
+                android:textColor="@color/colorBlack"
+                android:textSize="16dp"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dish_flag_recycler_view" />
+
+            <!-- Customisation Application -->
+
+            <!-- Customisation & Edit -->
+            <LinearLayout
+                android:id="@+id/customization_edit_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/customization_info_text_view">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="0.6"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:padding="5dp"
+                    android:background="@drawable/circular_rounded_corner_grey_background_with_grey_stroke">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/customization"/>
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_arrow_forward_black_24dp"/>
+
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_weight="0.4"
+                    android:layout_height="0dp"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.4"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:background="@drawable/circular_rounded_corner_purple_background"
+                    android:fontFamily="@font/air_bnb_cereal_medium"
+                    android:paddingStart="15dp"
+                    android:paddingTop="5dp"
+                    android:paddingEnd="15dp"
+                    android:paddingBottom="5dp"
+                    android:text="Edit"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/customisation_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="true"
+                android:orientation="vertical"
+                android:overScrollMode="never"
+                android:padding="5dp"
+                android:scrollbars="vertical"
+                android:visibility="visible"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:spanCount="2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/customization_edit_layout" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/dotted_line"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/customisation_recycler_view" />
+
+
+            <TextView
+                android:id="@+id/cuisine_info_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="@string/cuisine_info"
+                android:textAllCaps="true"
+                android:textColor="@color/colorBlack"
+                android:textSize="16dp"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/customisation_recycler_view" />
+
+            <TextView
+                android:id="@+id/select_one_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/select_at_least_one_cuisine"
+                android:textColor="@color/random_light_grey"
+                android:textSize="11dp"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cuisine_info_text_view" />
+
+            <LinearLayout
+                android:id="@+id/cuisine_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="30dp"
+                android:orientation="vertical"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/select_one_text_view">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/TextInputLayoutCommonStyle"
+                        android:hint="Type cuisine name">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            style="@style/EditTextCommonStyle"
+                            android:singleLine="true"
+                            android:text="@={viewModel.cuisineNameSearch}" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="end|bottom"
+                        android:layout_marginBottom="5dp"
+                        android:onClick="@{()-> viewModel.onClearCuisineSearch()}"
+                        android:padding="5dp"
+                        android:src="@drawable/ic_close_accent_24dp"
+                        android:visibility="@{viewModel.clearCuisineNameSearchVisible ? View.VISIBLE : View.INVISIBLE}"
+                        app:tint="@color/grey" />
+
+                </FrameLayout>
+
+                <!-- <TextView
+                     style="@style/errorTextStyle"
+                     activity="@{basicInfoViewModel.activity}"
+                     errorText="@{basicInfoViewModel.cuisineErrorMsg}"
+                     android:layout_marginTop="5dp"
+                     android:visibility="@{basicInfoViewModel.cuisineErrorMsg.empty? View.GONE : View.VISIBLE}"
+                     tools:text="Error" />-->
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/cuisine_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:minHeight="150dp"
+                    android:nestedScrollingEnabled="true"
+                    android:orientation="vertical"
+                    android:overScrollMode="never"
+                    android:padding="5dp"
+                    android:scrollbars="vertical"
+                    android:visibility="visible"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:spanCount="2" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/air_bnb_cereal_book"
+                    android:text="No results found"
+                    android:textColor="@color/colorBlack"
+                    android:visibility="@{viewModel.cuisineListMutableLiveData.empty ? View.VISIBLE : View.GONE}" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/dotted_line"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cuisine_layout" />
+
+            <LinearLayout
+                android:id="@+id/timing_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/cuisine_layout">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="30dp"
+                    android:text="@string/dish_availability"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="16dp"
+                    android:visibility="visible" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/days_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/random_grey"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/TextInputLayoutCommonStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="From">
+
+                        <EditText
+                            style="@style/EditTextCommonStyle"
+                            time="@{viewModel.fromTime}"
+                            android:focusable="false"
+                            android:singleLine="true"
+                            android:text="@{viewModel.fromTime}" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/TextInputLayoutCommonStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
+                        android:hint="To">
+
+                        <EditText
+                            style="@style/EditTextCommonStyle"
+                            android:focusable="false"
+                            android:singleLine="true"
+                            android:text="@{viewModel.toTime}"
+                            app:time="@{viewModel.toTime}" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:background="@drawable/circular_rounded_corner_purple_background"
+                        android:fontFamily="@font/air_bnb_cereal_medium"
+                        android:onClick="@{()-> viewModel.onAddTime()}"
+                        android:paddingStart="15dp"
+                        android:paddingTop="5dp"
+                        android:paddingEnd="15dp"
+                        android:paddingBottom="5dp"
+                        android:text="Add Time"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    style="@style/errorTextStyle"
+                    activity="@{viewModel.activity}"
+                    errorText="@{viewModel.errorMsg}"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="20dp"
+                    android:visibility="@{viewModel.errorMsg.empty? View.GONE : View.VISIBLE}"
+                    tools:text="Error" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/timings_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:overScrollMode="never"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/dotted_line"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/timing_layout" />
+
+            <TextView
+                android:id="@+id/save_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/circular_rounded_corner_purple_background"
+                android:fontFamily="@font/air_bnb_cereal_black"
+                android:onClick="@{()-> viewModel.validation()}"
+                android:paddingStart="40dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="40dp"
+                android:paddingBottom="10dp"
+                android:text="@string/save"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/timing_layout" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/menu_category_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/circular_rounded_corner_grey_background"
+                android:elevation="10dp"
+                android:visibility="@{viewModel.menuCategoryRecyclerVisibility ? View.VISIBLE : View.GONE}"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/menu_category_edit_text" />
+
+            <!-- <ImageView
+                 android:id="@+id/close_menu_category_recycler_image_view"
+                 android:layout_width="30dp"
+                 android:layout_height="30dp"
+                 android:layout_marginTop="20dp"
+                 android:layout_marginEnd="10dp"
+                 android:backgroundTint="@color/random_grey"
+                 android:src="@drawable/ic_baseline_cancel_24"
+                 android:elevation="10dp"
+                 android:visibility="@{viewModel.menuCategoryRecyclerVisibility ? View.VISIBLE : View.GONE}"
+                 app:layout_constraintEnd_toEndOf="@+id/menu_section_edit_text"
+                 app:layout_constraintTop_toBottomOf="@+id/menu_category_edit_text" />
+ -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/menu_section_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/circular_rounded_corner_grey_background"
+                android:elevation="10dp"
+                android:visibility="@{viewModel.menuSectionRecyclerVisibility ? View.VISIBLE : View.GONE}"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/menu_section_edit_text" />
+
+            <!--<ImageView
+                android:id="@+id/close_menu_section_recycler_image_view"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="@color/random_grey"
+                android:elevation="10dp"
+                android:src="@drawable/ic_baseline_cancel_24"
+                android:visibility="@{viewModel.menuSectionRecyclerVisibility ? View.VISIBLE : View.GONE}"
+                app:layout_constraintEnd_toEndOf="@+id/menu_section_edit_text"
+                app:layout_constraintTop_toBottomOf="@+id/menu_section_edit_text" />
+-->
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+</layout>

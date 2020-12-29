@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="staffSafetyReading"
+            type="com.astrika.checqk.model.StaffSafetyReadingDTO" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/staff_safety_readings_recycler_view">
+
+        <TextView
+            android:id="@+id/initial_letters_text_view"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/circular_rounded_corner_grey_background_with_grey_stroke"
+            android:fontFamily="@font/air_bnb_cereal_medium"
+            android:padding="5dp"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/grey"
+            android:textSize="13dp"
+            android:visibility="@{staffSafetyReading.profile.path.empty || staffSafetyReading.profile.path == null ? View.VISIBLE : View.GONE}"
+            tools:text="KD" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            imageUrl="@{staffSafetyReading.profile.path}"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/person_placeholder"
+            android:visibility="@{staffSafetyReading.profile.path.empty || staffSafetyReading.profile.path == null ? View.GONE : View.VISIBLE}"
+            app:civ_border_color="@color/colorPrimary"
+            app:civ_border_width="1dp" />
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:fontFamily="@font/air_bnb_cereal_medium"
+            android:singleLine="true"
+            android:text="@{staffSafetyReading.userName}"
+            android:textColor="@color/colorBlack"
+            android:textSize="14dp"
+            tools:text="Kiran Dalvi" />
+
+        <CheckBox
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:checked="@={staffSafetyReading.maskFlag}"
+            app:buttonTint="@color/colorPrimary" />
+
+        <EditText
+            android:id="@+id/temperature_edit_text"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="@font/air_bnb_cereal_book"
+            android:inputType="number"
+            android:maxLength="3"
+            android:text="@{staffSafetyReading.tempReading != null ? staffSafetyReading.tempReading.toString() : ``}"
+            android:textSize="12dp"
+            tools:text="97" />
+
+    </LinearLayout>
+</layout>

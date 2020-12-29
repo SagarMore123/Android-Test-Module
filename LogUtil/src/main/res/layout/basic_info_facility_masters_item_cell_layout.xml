@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="facilityMasterDTO"
+            type="com.astrika.checqk.model.FacilityMasterDTO" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginEnd="7dp"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+
+        <!--
+
+                <TextView
+                    android:id="@+id/item_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:drawableStart="@{facilityMasterDTO.selected ? @drawable/ic_check : @drawable/ic_baseline_grey_lens_24}"
+                    android:drawablePadding="5dp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/air_bnb_cereal_book"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text="@{facilityMasterDTO.facilityName}"
+                    android:textColor="@color/colorBlack"
+                    tools:text="Monday" />
+        -->
+
+        <CheckBox
+            android:id="@+id/check_box"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:checked="@{facilityMasterDTO.selected}"
+            android:drawablePadding="5dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/air_bnb_cereal_book"
+            android:singleLine="true"
+            android:text="@{facilityMasterDTO.facilityName}"
+            android:textColor="@color/colorBlack"
+            app:buttonTint="@color/colorPrimary"
+            tools:text="Cafe" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/facility_desc_et"
+            style="@style/EditTextCommonStyle"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:enabled="@{facilityMasterDTO.selected}"
+            android:maxLength="30"
+            android:singleLine="true"
+            android:text="@={facilityMasterDTO.facilityValue}"
+            android:textColor="@{facilityMasterDTO.selected ? @color/colorBlack : @color/random_grey}"
+            android:visibility="@{facilityMasterDTO.selected ? View.VISIBLE : View.INVISIBLE}" />
+
+
+    </LinearLayout>
+
+</layout>
+
+

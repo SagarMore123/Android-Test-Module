@@ -1,0 +1,675 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.astrika.checqk.view.dashboard.viewmodels.AddNewSubAdminViewModel" />
+
+
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/circular_rounded_corner_white_background"
+        tools:context=".view.dashboard.fragments.SubAdminFragment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="20dp"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/air_bnb_cereal_medium"
+                    android:text="ADD NEW SUB ADMIN"
+                    android:textAllCaps="true"
+                    android:textSize="16dp" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layerType="software"
+                    android:src="@drawable/dash_line" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/air_bnb_cereal_medium"
+                    android:gravity="center"
+                    android:text="Basic Info"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorDarkBlack" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="center_horizontal">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/profileImage"
+                            imageUrl="@{viewModel.profileImagePath}"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:src="@drawable/person_placeholder"
+                            app:civ_border_color="@color/colorPrimary"
+                            app:civ_border_width="1dp" />
+
+                        <ImageView
+                            android:id="@+id/profileImageEdit"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_gravity="center_horizontal"
+                            android:src="@drawable/ic_sub_admin_edit" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/TextInputLayoutCommonStyle"
+                            android:layout_marginStart="10dp"
+                            android:hint="@string/first_name_mandatory">
+
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                style="@style/EditTextCommonStyle"
+                                android:maxLength="100"
+                                android:singleLine="true"
+                                android:text="@={viewModel.fullName}" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <TextView
+                            style="@style/errorTextStyle"
+                            activity="@{viewModel.activity}"
+                            errorText="@{viewModel.fullNameErrorMsg}"
+                            android:layout_marginStart="10dp"
+                            android:visibility="@{viewModel.fullNameErrorMsg.empty? View.GONE : View.VISIBLE}"
+                            tools:text="Error" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/TextInputLayoutCommonStyle"
+                    android:hint="Email Address">
+
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        style="@style/EditTextCommonStyle"
+                        android:inputType="textEmailAddress"
+                        android:maxLength="100"
+                        android:singleLine="true"
+                        android:text="@={viewModel.emailAddress}" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    style="@style/errorTextStyle"
+                    activity="@{viewModel.activity}"
+                    errorText="@{viewModel.emailAddressErrorMsg}"
+                    android:visibility="@{viewModel.emailAddressErrorMsg.empty? View.GONE : View.VISIBLE}"
+                    tools:text="Error" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/TextInputLayoutCommonStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Country Code">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                style="@style/EditTextCommonStyle"
+                                android:digits="@string/keyboard_validation_phone_country_code"
+                                android:inputType="phone"
+                                android:maxLength="4"
+                                android:singleLine="true"
+                                android:text="@={viewModel.mobileCode}" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <TextView
+                            style="@style/errorTextStyle"
+                            activity="@{viewModel.activity}"
+                            errorText="@{viewModel.countryCodeErrorMsg}"
+                            android:visibility="@{viewModel.countryCodeErrorMsg.empty? View.GONE : View.VISIBLE}"
+                            tools:text="Error" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/TextInputLayoutCommonStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Mobile Number">
+
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                style="@style/EditTextCommonStyle"
+                                android:digits="0123456789"
+                                android:inputType="phone"
+                                android:maxLength="10"
+                                android:singleLine="true"
+                                android:text="@={viewModel.mobileNumber}" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <TextView
+                            style="@style/errorTextStyle"
+                            activity="@{viewModel.activity}"
+                            errorText="@{viewModel.mobileNumberErrorMsg}"
+                            android:visibility="@{viewModel.mobileNumberErrorMsg.empty? View.GONE : View.VISIBLE}"
+                            tools:text="Error" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:fontFamily="@font/air_bnb_cereal_medium"
+                    android:gravity="center"
+                    android:text="Access Info"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorDarkBlack" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/TextInputLayoutCommonStyle"
+                    android:hint="Select Access Role">
+
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        style="@style/EditTextCommonStyle"
+                        android:drawableEnd="@drawable/ic_keyboard_arrow_down_black_24dp"
+                        android:ellipsize="end"
+                        android:focusable="false"
+                        android:onClick="@{()-> viewModel.onAccessInfoClick()}"
+                        android:singleLine="true"
+                        android:text="@{viewModel.accessInfoValue}" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    style="@style/errorTextStyle"
+                    activity="@{viewModel.activity}"
+                    errorText="@{viewModel.accessRoleErrorMsg}"
+                    android:layout_marginBottom="10dp"
+                    android:visibility="@{viewModel.accessRoleErrorMsg.empty? View.GONE : View.VISIBLE}"
+                    tools:text="Error" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:fontFamily="@font/air_bnb_cereal_medium"
+                    android:gravity="center"
+                    android:text="Address Info"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorDarkBlack" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="30dp"
+                    android:orientation="vertical">
+
+                    <!-- Address Info -->
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/TextInputLayoutCommonStyle"
+                        android:hint="Address Line 1">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            style="@style/EditTextCommonStyle"
+                            android:maxLength="100"
+                            android:singleLine="true"
+                            android:text="@={viewModel.displayCommunicationInfoDTO.addressLine1}" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        style="@style/errorTextStyle"
+                        activity="@{viewModel.activity}"
+                        errorText="@{viewModel.displayCommunicationInfoDTO.addressLine1ErrorMsg}"
+                        android:visibility="@{viewModel.displayCommunicationInfoDTO.addressLine1ErrorMsg.empty? View.GONE : View.VISIBLE}"
+                        tools:text="Error" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/TextInputLayoutCommonStyle"
+                        android:hint="Address Line 2">
+
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            style="@style/EditTextCommonStyle"
+                            android:maxLength="100"
+                            android:singleLine="true"
+                            android:text="@={viewModel.displayCommunicationInfoDTO.addressLine2}" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <!-- Country & State-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="10dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/TextInputLayoutCommonStyle"
+                                android:hint="Country">
+
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    style="@style/EditTextCommonStyle"
+                                    android:drawableEnd="@drawable/ic_keyboard_arrow_down_black_24dp"
+                                    android:ellipsize="end"
+                                    android:focusable="false"
+                                    android:onClick="@{()-> viewModel.onCountryClick()}"
+                                    android:singleLine="true"
+                                    android:text="@={viewModel.displayCommunicationInfoDTO.countryName}" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <TextView
+                                style="@style/errorTextStyle"
+                                activity="@{viewModel.activity}"
+                                errorText="@{viewModel.displayCommunicationInfoDTO.countryErrorMsg}"
+                                android:visibility="@{viewModel.displayCommunicationInfoDTO.countryErrorMsg.empty? View.GONE : View.VISIBLE}"
+                                tools:text="Error" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/TextInputLayoutCommonStyle"
+                                android:hint="State">
+
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    style="@style/EditTextCommonStyle"
+                                    android:drawableEnd="@drawable/ic_keyboard_arrow_down_black_24dp"
+                                    android:ellipsize="end"
+                                    android:focusable="false"
+                                    android:onClick="@{()-> viewModel.onStateClick()}"
+                                    android:singleLine="true"
+                                    android:text="@={viewModel.displayCommunicationInfoDTO.StateName}" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <TextView
+                                style="@style/errorTextStyle"
+                                activity="@{viewModel.activity}"
+                                errorText="@{viewModel.displayCommunicationInfoDTO.stateErrorMsg}"
+                                android:visibility="@{viewModel.displayCommunicationInfoDTO.stateErrorMsg.empty? View.GONE : View.VISIBLE}"
+                                tools:text="Error" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <!-- City & Area -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="10dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/TextInputLayoutCommonStyle"
+                                android:hint="City">
+
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    style="@style/EditTextCommonStyle"
+                                    android:drawableEnd="@drawable/ic_keyboard_arrow_down_black_24dp"
+                                    android:ellipsize="end"
+                                    android:focusable="false"
+                                    android:onClick="@{()-> viewModel.onCityClick()}"
+                                    android:singleLine="true"
+                                    android:text="@={viewModel.displayCommunicationInfoDTO.cityName}" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <TextView
+                                style="@style/errorTextStyle"
+                                activity="@{viewModel.activity}"
+                                errorText="@{viewModel.displayCommunicationInfoDTO.cityErrorMsg}"
+                                android:visibility="@{viewModel.displayCommunicationInfoDTO.cityErrorMsg.empty? View.GONE : View.VISIBLE}"
+                                tools:text="Error" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/TextInputLayoutCommonStyle"
+                                android:hint="Area">
+
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    style="@style/EditTextCommonStyle"
+                                    android:drawableEnd="@drawable/ic_keyboard_arrow_down_black_24dp"
+                                    android:ellipsize="end"
+                                    android:focusable="false"
+                                    android:onClick="@{()-> viewModel.onAreaClick()}"
+                                    android:singleLine="true"
+                                    android:text="@={viewModel.displayCommunicationInfoDTO.areaName}" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <TextView
+                                style="@style/errorTextStyle"
+                                activity="@{viewModel.activity}"
+                                errorText="@{viewModel.displayCommunicationInfoDTO.areaErrorMsg}"
+                                android:visibility="@{viewModel.displayCommunicationInfoDTO.areaErrorMsg.empty? View.GONE : View.VISIBLE}"
+                                tools:text="Error" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <!-- Pincode & Landmark -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="10dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/TextInputLayoutCommonStyle"
+                                android:hint="Pincode">
+
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    style="@style/EditTextCommonStyle"
+                                    android:digits="@string/keyboard_validation_wo_sp_char"
+                                    android:inputType="phone"
+                                    android:maxLength="6"
+                                    android:singleLine="true"
+                                    android:text="@={viewModel.displayCommunicationInfoDTO.pincodeNo}" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <TextView
+                                style="@style/errorTextStyle"
+                                activity="@{viewModel.activity}"
+                                errorText="@{viewModel.displayCommunicationInfoDTO.pincodeErrorMsg}"
+                                android:visibility="@{viewModel.displayCommunicationInfoDTO.pincodeErrorMsg.empty? View.GONE : View.VISIBLE}"
+                                tools:text="Error" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/TextInputLayoutCommonStyle"
+                                android:hint="Landmark">
+
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    style="@style/EditTextCommonStyle"
+                                    android:maxLength="50"
+                                    android:singleLine="true"
+                                    android:text="@={viewModel.displayCommunicationInfoDTO.landmark}" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <!--
+
+                                        <WebView
+                                            android:id="@+id/web_view"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="200dp" />
+                    -->
+                    <!-- Longitude & Latitude -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/TextInputLayoutCommonStyle"
+                                android:hint="Latitude">
+
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    style="@style/EditTextCommonStyle"
+                                    android:inputType="numberDecimal"
+                                    android:singleLine="true"
+                                    android:text="@={viewModel.displayCommunicationInfoDTO.latitude}" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <TextView
+                                style="@style/errorTextStyle"
+                                activity="@{viewModel.activity}"
+                                errorText="@{viewModel.displayCommunicationInfoDTO.latitudeErrorMsg}"
+                                android:visibility="@{viewModel.displayCommunicationInfoDTO.latitudeErrorMsg.empty? View.GONE : View.VISIBLE}"
+                                tools:text="Error" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="10dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/TextInputLayoutCommonStyle"
+                                android:hint="Longitude">
+
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    style="@style/EditTextCommonStyle"
+                                    android:inputType="numberDecimal"
+                                    android:singleLine="true"
+                                    android:text="@={viewModel.displayCommunicationInfoDTO.longitude}" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <TextView
+                                style="@style/errorTextStyle"
+                                activity="@{viewModel.activity}"
+                                errorText="@{viewModel.displayCommunicationInfoDTO.longitudeErrorMsg}"
+                                android:visibility="@{viewModel.displayCommunicationInfoDTO.longitudeErrorMsg.empty? View.GONE : View.VISIBLE}"
+                                tools:text="Error" />
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/circular_rounded_corner_purple_background"
+                        android:fontFamily="@font/air_bnb_cereal_medium"
+                        android:onClick="@{()-> viewModel.onChangeLocationClick()}"
+                        android:paddingStart="40dp"
+                        android:paddingTop="10dp"
+                        android:paddingEnd="40dp"
+                        android:paddingBottom="10dp"
+                        android:text="Point Marker On Map"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/circular_rounded_corner_white_background_with_accent_stroke"
+                        android:fontFamily="@font/air_bnb_cereal_medium"
+                        android:onClick="@{()-> viewModel.onChangeLocationClick()}"
+                        android:padding="5dp"
+                        android:text="Point Marker On Map"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="16sp"
+                        android:visibility="gone" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/circular_rounded_corner_purple_background"
+                        android:fontFamily="@font/air_bnb_cereal_medium"
+                        android:onClick="@{()->viewModel.onCancel()}"
+                        android:paddingStart="40dp"
+                        android:paddingTop="10dp"
+                        android:paddingEnd="40dp"
+                        android:paddingBottom="10dp"
+                        android:text="Cancel"
+                        android:textAllCaps="true"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="20dp"
+                        android:layout_height="0dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/circular_rounded_corner_purple_background"
+                        android:fontFamily="@font/air_bnb_cereal_medium"
+                        android:onClick="@{()->viewModel.onSave()}"
+                        android:paddingStart="40dp"
+                        android:paddingTop="10dp"
+                        android:paddingEnd="40dp"
+                        android:paddingBottom="10dp"
+                        android:text="Save"
+                        android:textAllCaps="true"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</layout>

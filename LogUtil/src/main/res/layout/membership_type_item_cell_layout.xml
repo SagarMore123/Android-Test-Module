@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="text"
+            type="String" />
+
+        <variable
+            name="isSelected"
+            type="Boolean" />
+
+    </data>
+
+    <RadioButton
+        android:id="@+id/radio_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="7dp"
+        android:checked="@{isSelected}"
+        android:drawablePadding="5dp"
+        android:fontFamily="@font/air_bnb_cereal_book"
+        android:text="@{text}"
+        android:textColor="@color/colorBlack"
+        app:buttonTint="@color/colorPrimary"
+        tools:text="Cafe" />
+
+</layout>
+
+

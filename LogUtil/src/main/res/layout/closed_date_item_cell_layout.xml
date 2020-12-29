@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="closedDateDTO"
+            type="com.astrika.checqk.model.ClosedDatesDTO" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:fontFamily="@font/air_bnb_cereal_book"
+            android:singleLine="true"
+            android:text="@{closedDateDTO.displayDate}"
+            android:textColor="@color/colorBlack"
+            tools:text="26 January" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/air_bnb_cereal_book"
+            android:text="@{closedDateDTO.occasion}"
+            android:textColor="@color/colorBlack"
+            tools:text="Republic Day" />
+
+        <ImageView
+            android:id="@+id/remove_img"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/ic_baseline_remove_circle_24"
+            app:tint="@color/colorPrimary" />
+
+        <!--
+                <TextView
+                    android:id="@+id/remove_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/ic_remove"
+                    android:drawablePadding="10dp"
+                    android:fontFamily="@font/air_bnb_cereal_medium"
+                    android:gravity="center_vertical"
+                    android:text="Remove"
+                    android:textColor="@color/colorBlack" />
+        -->
+
+
+    </LinearLayout>
+
+</layout>
+
+

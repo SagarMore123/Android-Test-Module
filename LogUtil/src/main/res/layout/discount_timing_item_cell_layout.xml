@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="discountTimingDTO"
+            type="com.astrika.checqk.model.DiscountDaysTimingDTO" />
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="7dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/air_bnb_cereal_book"
+                    android:gravity="center_horizontal"
+                    android:singleLine="true"
+                    android:text="@{discountTimingDTO.startsAt + ` - ` + discountTimingDTO.endsAt}"
+                    android:textColor="@color/colorBlack"
+                    tools:text="10:00 PM - 12:00 PM" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:fontFamily="@font/air_bnb_cereal_book"
+                    android:gravity="center_horizontal"
+                    android:text="@{discountTimingDTO.discountApplicable + `% Discount`}"
+                    android:textColor="@color/colorPrimary"
+                    tools:text="15% Discount" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/air_bnb_cereal_book"
+                    android:gravity="center_horizontal"
+                    android:maxLength="20"
+                    android:singleLine="true"
+                    android:text="@{discountTimingDTO.complimentaryApplicable}"
+                    android:textColor="@color/colorPrimary"
+                    tools:text="Free Beer" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@color/colorDashboardToolbar"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+
+                <ImageView
+                    android:id="@+id/edit_img"
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+                    android:layout_marginBottom="15dp"
+                    android:src="@drawable/ic_edit"
+                    app:tint="@color/colorWhite" />
+
+                <ImageView
+                    android:id="@+id/delete_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_delete_white"
+                    app:tint="@color/colorWhite" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>
+
+

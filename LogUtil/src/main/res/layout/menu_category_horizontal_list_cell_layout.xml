@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="menuCategory"
+            type="com.astrika.checqk.model.CategoryCatalogueDTO" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="3dp">
+
+        <Button
+            android:id="@+id/menu_category_button"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:minWidth="120dp"
+            android:fontFamily="@font/air_bnb_cereal_black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="@{menuCategory.catalogueCategoryName}"
+            tools:text="Menu"
+            android:textAllCaps="true"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            android:elevation="5dp"
+            android:background="@drawable/circular_rounded_corner_white_background_with_blue_stroke"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

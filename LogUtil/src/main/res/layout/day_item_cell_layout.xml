@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="dayDTO"
+            type="com.astrika.checqk.model.DayDTO" />
+
+    </data>
+
+
+    <CheckBox
+        android:id="@+id/check_box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="5dp"
+        android:checked="@{dayDTO.dayIsCheckedOrClosed}"
+        android:drawablePadding="5dp"
+        android:enabled="@{dayDTO.dayEnable}"
+        android:fontFamily="@font/air_bnb_cereal_book"
+        android:text="@{dayDTO.dayName}"
+        android:textColor="@color/colorBlack"
+        app:buttonTint="@color/colorPrimary"
+        tools:text="Monday" />
+
+</layout>
+
+

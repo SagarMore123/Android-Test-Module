@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+
+        <variable
+            name="dayDTO"
+            type="com.astrika.checqk.model.DayDTO" />
+
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/circular_rounded_corner_grey_background"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:id="@+id/day_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:fontFamily="@font/air_bnb_cereal_book"
+                android:singleLine="true"
+                android:text="@{dayDTO.dayName}"
+                android:textColor="@color/colorBlack"
+                android:textSize="16sp"
+                tools:text="Monday" />
+
+
+            <!--
+                        <TextView
+                            android:id="@+id/mark_as_closed_img"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="2dp"
+                            android:drawableEnd="@{dayDTO.dayIsCheckedOrClosed ? @drawable/ic_check : @drawable/ic_baseline_grey_lens_24}"
+                            android:drawablePadding="5dp"
+                            android:fontFamily="@font/air_bnb_cereal_book"
+                            android:text="Mark as Closed" />
+            -->
+
+            <CheckBox
+                android:id="@+id/mark_as_closed_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mark as Closed"
+                android:layoutDirection="rtl"
+                android:checked="@{dayDTO.dayIsCheckedOrClosed}"
+                android:fontFamily="@font/air_bnb_cereal_book"
+                android:textColor="@color/colorBlack"
+                android:buttonTint="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/time_text_view"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:ellipsize="end"
+              android:fontFamily="@font/air_bnb_cereal_book"
+              android:singleLine="true"
+              android:textColor="@color/colorBlack"
+              android:layout_marginStart="10dp"
+              android:layout_marginEnd="20dp"
+              android:textSize="16sp"
+              tools:text="12:00 - 1:00"
+                android:visibility="gone"/>
+
+          <ImageView
+              android:id="@+id/remove_img"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginEnd="4dp"
+              android:src="@drawable/ic_baseline_cancel_24"
+              app:tint="@color/colorPrimary"
+              android:visibility="gone"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/timing_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="vertical" />
+<!--            android:visibility="@{dayDTO.dayIsCheckedOrClosed ? View.GONE : View.VISIBLE}" />-->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/air_bnb_cereal_book"
+            android:text="@{dayDTO.dayName +` closed`}"
+            android:textColor="@color/colorRed"
+            android:visibility="@{dayDTO.dayIsCheckedOrClosed ? View.VISIBLE : View.GONE}"
+            tools:text="Monday closed" />
+
+    </LinearLayout>
+
+</layout>
+
+

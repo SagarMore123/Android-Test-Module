@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+
+        <variable
+            name="basicInfoViewModel"
+            type="com.astrika.checqk.view.dashboard.viewmodels.BasicInfoViewModel" />
+
+
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="20dp"
+            android:orientation="vertical">
+
+            <!-- Basic Info -->
+            <LinearLayout
+                style="@style/HeaderLayoutStyle"
+                android:onClick="@{()->basicInfoViewModel.onBasicInfoClick()}">
+
+                <TextView
+                    style="@style/HeaderTextStyle"
+                    android:text="Basic Info" />
+
+                <ImageView
+                    style="@style/HeaderArrowImageStyle"
+                    android:src="@{basicInfoViewModel.openTimingsLayoutVisible ? @drawable/ic_arrow_up : @drawable/ic_arrow_down }" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="10dp"
+                android:visibility="@{basicInfoViewModel.openTimingsLayoutVisible ? View.VISIBLE : View.GONE}">
+
+
+                <!-- Outlet Type -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/air_bnb_cereal_book"
+                    android:text="Outlet Type"
+                    android:textColor="@color/random_grey_1" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/outlet_type_recycler_view"
+                    style="@style/BasicInfoRecyclerViewStyle" />
+
+                <!-- Seating Type -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/air_bnb_cereal_book"
+                    android:text="Seating Type"
+                    android:textColor="@color/random_grey_1" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/seating_type_recycler_view"
+                    style="@style/BasicInfoRecyclerViewStyle" />
+
+
+                <!-- In Mall -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/air_bnb_cereal_book"
+                    android:text="In Mall"
+                    android:textColor="@color/random_grey_1" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/in_mall_type_recycler_view"
+                    style="@style/BasicInfoRecyclerViewStyle" />
+
+
+                <!-- Food Type -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/air_bnb_cereal_book"
+                    android:text="Food Type"
+                    android:textColor="@color/random_grey_1" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/food_type_recycler_view"
+                    style="@style/BasicInfoRecyclerViewStyle" />
+
+
+                <!-- Meal Type -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/air_bnb_cereal_book"
+                    android:text="Meal Type"
+                    android:textColor="@color/random_grey_1" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/meal_type_recycler_view"
+                    style="@style/BasicInfoRecyclerViewStyle" />
+
+                <!-- Served Alcohol -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/air_bnb_cereal_book"
+                    android:text="Served Alcohol ?"
+                    android:textColor="@color/random_grey_1" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/served_alcohol_recycler_view"
+                    style="@style/BasicInfoRecyclerViewStyle" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/TextInputLayoutCommonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Cost for 2 (Exclusive of Taxes/Charges)">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/cost_for_two_et"
+                        style="@style/EditTextCommonStyle"
+                        android:inputType="numberDecimal"
+                        android:maxLength="15"
+                        android:singleLine="true"
+                        android:text="@={basicInfoViewModel.costForTwo}" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/TextInputLayoutCommonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Famous For">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/famous_for_et"
+                        style="@style/EditTextCommonStyle"
+                        android:imeOptions="actionDone"
+                        android:maxLength="500"
+                        android:singleLine="true" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    style="@style/errorTextStyle"
+                    activity="@{basicInfoViewModel.activity}"
+                    errorText="@{basicInfoViewModel.famousForErrorMsg}"
+                    android:layout_marginTop="5dp"
+                    android:visibility="@{basicInfoViewModel.famousForErrorMsg.empty? View.GONE : View.VISIBLE}"
+                    tools:text="Error" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/famous_for_recycler_view"
+                    style="@style/BasicInfoRecyclerViewStyle"
+                    android:orientation="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
+                    app:spanCount="3" />
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/TextInputLayoutCommonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="30dp"
+                    android:hint="About Restaurant">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        style="@style/EditTextCommonStyle"
+                        android:inputType="text"
+                        android:maxLength="500"
+                        android:maxLines="5"
+                        android:overScrollMode="always"
+                        android:scrollbars="vertical"
+                        android:singleLine="false"
+                        android:text="@={basicInfoViewModel.outletDescription}"
+                        app:touchListener="@{true}" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+            </LinearLayout>
+
+            <!-- Cuisines -->
+            <LinearLayout
+                style="@style/HeaderLayoutStyle"
+                android:onClick="@{()->basicInfoViewModel.onCuisineInfoClick()}">
+
+                <TextView
+                    style="@style/HeaderTextStyle"
+                    android:text="Cuisine Info" />
+
+                <ImageView
+                    style="@style/HeaderArrowImageStyle"
+                    android:src="@{basicInfoViewModel.cuisineInfoLayoutVisible ? @drawable/ic_arrow_up : @drawable/ic_arrow_down }" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:orientation="vertical"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="10dp"
+                android:visibility="@{basicInfoViewModel.cuisineInfoLayoutVisible ? View.VISIBLE : View.GONE}">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/air_bnb_cereal_book"
+                    android:text="Select atleast one of the below cuisine"
+                    android:textColor="@color/random_grey_1" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/TextInputLayoutCommonStyle"
+                        android:hint="Type cuisine name">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            style="@style/EditTextCommonStyle"
+                            android:singleLine="true"
+                            android:text="@={basicInfoViewModel.cuisineNameSearch}" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="end|bottom"
+                        android:layout_marginBottom="5dp"
+                        android:onClick="@{()-> basicInfoViewModel.onClearCuisineSearch()}"
+                        android:padding="5dp"
+                        android:src="@drawable/ic_close_accent_24dp"
+                        android:visibility="@{basicInfoViewModel.clearCuisineNameSearchVisible ? View.VISIBLE : View.INVISIBLE}"
+                        app:tint="@color/grey" />
+                </FrameLayout>
+
+                <TextView
+                    style="@style/errorTextStyle"
+                    activity="@{basicInfoViewModel.activity}"
+                    errorText="@{basicInfoViewModel.cuisineErrorMsg}"
+                    android:layout_marginTop="5dp"
+                    android:visibility="@{basicInfoViewModel.cuisineErrorMsg.empty? View.GONE : View.VISIBLE}"
+                    tools:text="Error" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/cuisine_recycler_view"
+                    style="@style/BasicInfoRecyclerViewStyle"
+                    android:layout_height="300dp"
+                    android:nestedScrollingEnabled="true"
+                    android:scrollbars="vertical"
+                    android:visibility="@{basicInfoViewModel.cuisineListMutableLiveData.empty ? View.GONE : View.VISIBLE}" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/air_bnb_cereal_book"
+                    android:text="No results found"
+                    android:visibility="@{basicInfoViewModel.cuisineListMutableLiveData.empty ? View.VISIBLE : View.GONE}" />
+
+
+            </LinearLayout>
+
+            <!-- Facility Info -->
+            <LinearLayout
+                style="@style/HeaderLayoutStyle"
+                android:onClick="@{()->basicInfoViewModel.onFacilityInfoClick()}">
+
+                <TextView
+                    style="@style/HeaderTextStyle"
+                    android:text="Facility Info" />
+
+                <ImageView
+                    style="@style/HeaderArrowImageStyle"
+                    android:src="@{basicInfoViewModel.facilityInfoLayoutVisible ? @drawable/ic_arrow_up : @drawable/ic_arrow_down }" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:orientation="vertical"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="10dp"
+                android:visibility="@{basicInfoViewModel.facilityInfoLayoutVisible ? View.VISIBLE : View.GONE}">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/air_bnb_cereal_book"
+                    android:text="Select any of the below facilities provided in your restaurant"
+                    android:textColor="@color/random_grey_1" />
+
+
+                <TextView
+                    style="@style/errorTextStyle"
+                    activity="@{basicInfoViewModel.activity}"
+                    errorText="@{basicInfoViewModel.facilityErrorMsg}"
+                    android:layout_marginTop="5dp"
+                    android:visibility="@{basicInfoViewModel.facilityErrorMsg.empty? View.GONE : View.VISIBLE}"
+                    tools:text="Error" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/facility_recycler_view"
+                    style="@style/BasicInfoRecyclerViewStyle"
+                    android:layout_height="400dp"
+                    android:nestedScrollingEnabled="true"
+                    android:scrollbars="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+            </LinearLayout>
+
+
+            <!-- Famous Dishes -->
+            <LinearLayout
+                style="@style/HeaderLayoutStyle"
+                android:onClick="@{()->basicInfoViewModel.onFamousDishesClick()}">
+
+                <TextView
+                    style="@style/HeaderTextStyle"
+                    android:text="Famous Dishes" />
+
+                <ImageView
+                    style="@style/HeaderArrowImageStyle"
+                    android:src="@{basicInfoViewModel.famousDishesLayoutVisible ? @drawable/ic_arrow_up : @drawable/ic_arrow_down }" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:orientation="vertical"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="10dp"
+                android:visibility="@{basicInfoViewModel.famousDishesLayoutVisible ? View.VISIBLE : View.GONE}">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/TextInputLayoutCommonStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="Dish Name">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            style="@style/EditTextCommonStyle"
+                            android:inputType="textCapWords"
+                            android:maxLength="50"
+                            android:singleLine="true"
+                            android:text="@={basicInfoViewModel.productName}" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/TextInputLayoutCommonStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
+                        android:hint="Select Category">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            style="@style/EditTextCommonStyle"
+                            android:focusable="false"
+                            android:onClick="@{()->basicInfoViewModel.onCategoryClick()}"
+                            android:singleLine="true"
+                            android:text="@{basicInfoViewModel.dishCategoryValue}" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="bottom"
+                        android:onClick="@{()-> basicInfoViewModel.onAddFamousDishes()}"
+                        android:src="@drawable/ic_baseline_add_circle_24"
+                        app:tint="@color/colorPrimary" />
+
+
+                </LinearLayout>
+
+
+                <TextView
+                    style="@style/errorTextStyle"
+                    activity="@{basicInfoViewModel.activity}"
+                    errorText="@{basicInfoViewModel.famousDishesErrorMsg}"
+                    android:layout_marginTop="5dp"
+                    android:visibility="@{basicInfoViewModel.famousDishesErrorMsg.empty? View.GONE : View.VISIBLE}"
+                    tools:text="Error" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/famous_dishes_recycler_view"
+                    style="@style/BasicInfoRecyclerViewStyle"
+                    android:layout_marginTop="5dp"
+                    android:paddingEnd="3dp"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/circular_rounded_corner_purple_background"
+                android:fontFamily="@font/air_bnb_cereal_medium"
+                android:onClick="@{()-> basicInfoViewModel.onSaveClick(false)}"
+                android:paddingStart="40dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="40dp"
+                android:paddingBottom="10dp"
+                android:text="Save"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</layout>

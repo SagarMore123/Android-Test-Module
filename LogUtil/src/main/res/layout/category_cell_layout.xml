@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="galleryImageCategory"
+            type="com.astrika.checqk.model.GalleryImageCategory" />
+
+        <import type="android.view.View"/>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/checkImage"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:visibility="@{galleryImageCategory.showChecked ? View.VISIBLE : View.INVISIBLE}"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_check" />
+
+        <TextView
+            android:id="@+id/categoryTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:fontFamily="@font/air_bnb_cereal_book"
+            android:text="@{galleryImageCategory.galleryImageCategoryName}"
+            tools:text="Ambience" />
+
+    </LinearLayout>
+
+</layout>

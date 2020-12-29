@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="permissionDto"
+            type="com.astrika.checqk.model.PermissionDTO" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp">
+
+        <RelativeLayout
+            android:id="@+id/main_layout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/background_white_with_border"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <TextView
+                style="@style/HeaderTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/air_bnb_cereal_book"
+                android:text="@{permissionDto.name}"
+                android:textAllCaps="true"
+                android:textColor="@color/colorBlack"
+                tools:text="Dashboard Summary" />
+
+            <ImageView
+                android:id="@+id/expand_image_view"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:padding="5dp"
+                android:src="@drawable/ic_arrow_up"
+                app:tint="@color/colorDashboardToolbar" />
+
+        </RelativeLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/permission_list_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/random_grey_light"
+            android:visibility="visible"
+            app:layout_constraintTop_toBottomOf="@+id/main_layout">
+
+            <LinearLayout
+                android:id="@+id/header_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Outlet Dashboard"
+                    android:visibility="invisible" />
+
+                <RelativeLayout
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/view_check_box"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/ic_baseline_grey_lens_24" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/view_check_box"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="@font/air_bnb_cereal_book"
+                        android:text="View"
+                        android:textSize="10dp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/random_grey">
+                    <!-- <CheckBox
+                         android:id="@+id/add_new_check_box"
+                         android:layout_width="30dp"
+                         android:layout_height="30dp"
+                         android:checked="@={permissionDto.addition}"
+                         android:buttonTint="@color/colorPrimary"
+                         android:layout_centerHorizontal="true"
+                         />-->
+                    <ImageView
+                        android:id="@+id/add_new_check_box"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/ic_baseline_grey_lens_24" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/add_new_check_box"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="@font/air_bnb_cereal_book"
+                        android:text="Add New"
+                        android:textSize="10dp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/random_grey">
+                    <!-- <CheckBox
+                         android:id="@+id/update_check_box"
+                         android:layout_width="30dp"
+                         android:layout_height="30dp"
+                         android:checked="@={permissionDto.edit}"
+                         android:buttonTint="@color/colorPrimary"
+                         android:layout_centerHorizontal="true"
+                         />-->
+                    <ImageView
+                        android:id="@+id/update_check_box"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/ic_baseline_grey_lens_24" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/update_check_box"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="@font/air_bnb_cereal_book"
+                        android:text="Update"
+                        android:textSize="10dp" />
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/permission_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:nestedScrollingEnabled="true"
+                android:overScrollMode="never"
+                android:visibility="visible"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintTop_toBottomOf="@+id/header_layout" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

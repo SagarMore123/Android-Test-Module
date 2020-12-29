@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="menuSection"
+            type="com.astrika.checqk.model.CatalogueSectionDTO" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.guanaj.easyswipemenulibrary.EasySwipeMenuLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:contentView="@id/content_layout"
+            app:rightMenuView="@id/right_layout"
+            android:layout_marginTop="3dp"
+            android:background="@color/colorDashboardToolbar">
+
+            <RelativeLayout
+                android:id="@+id/content_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible"
+                android:background="@drawable/circular_rounded_corner_white_background_with_accent_stroke">
+
+                <ImageView
+                    android:id="@+id/drag_image_view"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_move"
+                    android:layout_centerVertical="true"
+                    android:padding="6dp"
+                    android:layout_margin="5dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="@string/starter_veg"
+                    style="@style/HeaderTextStyle"
+                    android:text="@{menuSection.catalogueSectionName}"
+                    android:layout_toRightOf="@+id/drag_image_view"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/colorBlack"
+                    android:textAllCaps="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="Tax Percentage 05%"
+                    android:text="@{`Tax Percentage ` + menuSection.taxValue + `%`}"
+                    android:fontFamily="@font/air_bnb_cereal_book"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/colorBlack"
+                    android:layout_marginEnd="30dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/right_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@color/colorDashboardToolbar">
+
+                <ImageView
+                    android:id="@+id/edit_image_view"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_edit_pencile"
+                    android:layout_centerVertical="true"
+                    android:padding="5dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    />
+
+                <ImageView
+                    android:id="@+id/delete_image_view"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_delete"
+                    android:layout_centerVertical="true"
+                    android:padding="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_toRightOf="@+id/edit_image_view"/>
+
+            </RelativeLayout>
+
+        </com.guanaj.easyswipemenulibrary.EasySwipeMenuLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

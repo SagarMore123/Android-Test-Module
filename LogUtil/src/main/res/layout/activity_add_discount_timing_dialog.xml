@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="addDiscountTimingViewModel"
+            type="com.astrika.checqk.view.AddDiscountTimingViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/air_bnb_cereal_medium"
+            android:text="Add New Discount"
+            android:textAllCaps="true"
+            android:textColor="@color/colorBlack" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/air_bnb_cereal_book"
+            android:text="Time Slot Info"
+            android:textAllCaps="true"
+            android:textColor="@color/colorBlack" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/discount_desc_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/air_bnb_cereal_book"
+                android:textColor="@color/colorBlack"
+                tools:text="Add discount for Pre-Basic Membership for Monday" />
+
+            <!--
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/air_bnb_cereal_book"
+                            tools:text="Monday"
+                            android:text="@{addDiscountTimingViewModel.weekName}"
+                            android:textColor="@color/colorPrimary" />
+            -->
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/TextInputLayoutCommonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="From"
+                android:textColorHint="@color/colorBlack">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    style="@style/EditTextCommonStyle"
+                    time="@{addDiscountTimingViewModel.fromTime}"
+                    android:drawableEnd="@drawable/ic_keyboard_arrow_down_black_24dp"
+                    android:drawablePadding="5dp"
+                    android:focusable="false"
+                    android:singleLine="true"
+                    android:text="@{addDiscountTimingViewModel.fromTime}" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/TextInputLayoutCommonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:hint="To"
+                android:textColorHint="@color/colorBlack">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    style="@style/EditTextCommonStyle"
+                    android:drawableEnd="@drawable/ic_keyboard_arrow_down_black_24dp"
+                    android:drawablePadding="5dp"
+                    android:focusable="false"
+                    android:singleLine="true"
+                    android:text="@{addDiscountTimingViewModel.toTime}"
+                    app:time="@{addDiscountTimingViewModel.toTime}" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </LinearLayout>
+
+        <TextView
+            style="@style/errorTextStyle"
+            activity="@{addDiscountTimingViewModel.activity}"
+            errorText="@{addDiscountTimingViewModel.errorMsg}"
+            android:layout_marginTop="5dp"
+            android:visibility="@{addDiscountTimingViewModel.errorMsg.empty? View.GONE : View.VISIBLE}"
+            tools:text="Error" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/TextInputLayoutCommonStyle"
+            android:hint="Assured Discount"
+            android:textColorHint="@color/colorBlack"
+            app:hintTextColor="@color/colorBlack">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/EditTextCommonStyle"
+                android:digits="@string/keyboard_validation_only_numbers"
+                android:drawableEnd="@drawable/ic_discount_black"
+                android:drawablePadding="5dp"
+                android:enabled="false"
+                android:inputType="number"
+                android:maxLength="3"
+                android:singleLine="true"
+                android:text="@{addDiscountTimingViewModel.assuredDiscount}" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/TextInputLayoutCommonStyle"
+            android:hint="Discount Applicable"
+            android:textColorHint="@color/colorBlack"
+            app:hintTextColor="@color/colorBlack">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/EditTextCommonStyle"
+                android:digits="@string/keyboard_validation_only_numbers"
+                android:drawableEnd="@drawable/ic_discount_black"
+                android:drawablePadding="5dp"
+                android:inputType="number"
+                android:maxLength="3"
+                android:singleLine="true"
+                android:text="@={addDiscountTimingViewModel.applicableDiscount}" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            style="@style/errorTextStyle"
+            activity="@{addDiscountTimingViewModel.activity}"
+            errorText="@{addDiscountTimingViewModel.applicableDiscountErrorMsg}"
+            android:layout_marginTop="5dp"
+            android:visibility="@{addDiscountTimingViewModel.applicableDiscountErrorMsg.empty? View.GONE : View.VISIBLE}"
+            tools:text="Error" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/TextInputLayoutCommonStyle"
+            android:hint="Complimentary"
+            android:textColorHint="@color/colorBlack"
+            app:hintTextColor="@color/colorBlack">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/EditTextCommonStyle"
+                android:drawableEnd="@drawable/ic_tray_black"
+                android:drawablePadding="5dp"
+                android:maxLength="50"
+                android:singleLine="true"
+                android:text="@={addDiscountTimingViewModel.complimentary}" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            style="@style/errorTextStyle"
+            activity="@{addDiscountTimingViewModel.activity}"
+            errorText="@{addDiscountTimingViewModel.complimentaryErrorMsg}"
+            android:layout_marginTop="5dp"
+            android:visibility="@{addDiscountTimingViewModel.complimentaryErrorMsg.empty? View.GONE : View.VISIBLE}"
+            tools:text="Error" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/TextInputLayoutCommonStyle"
+            android:hint="Terms &amp; Conditions"
+            android:textColorHint="@color/colorBlack"
+            app:hintTextColor="@color/colorBlack">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/EditTextCommonStyle"
+                android:drawableEnd="@drawable/ic_asterisk_black"
+                android:drawablePadding="5dp"
+                android:inputType="text"
+                android:maxLength="400"
+                android:maxLines="5"
+                android:overScrollMode="always"
+                android:scrollbars="vertical"
+                android:singleLine="false"
+                android:text="@={addDiscountTimingViewModel.terms}"
+                app:touchListener="@{true}" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/circular_rounded_corner_purple_background"
+                android:fontFamily="@font/air_bnb_cereal_medium"
+                android:onClick="@{()-> addDiscountTimingViewModel.onSaveClick()}"
+                android:paddingStart="40dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="40dp"
+                android:paddingBottom="10dp"
+                android:text="Save"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/circular_rounded_corner_purple_background"
+                android:fontFamily="@font/air_bnb_cereal_medium"
+                android:onClick="@{()-> addDiscountTimingViewModel.onCancelClick()}"
+                android:paddingStart="35dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="35dp"
+                android:paddingBottom="10dp"
+                android:text="Cancel"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</layout>

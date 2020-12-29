@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="safetyMeasuresDetailsDTO"
+            type="com.astrika.checqk.model.SafetyMeasuresDetailsDTO" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="7dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:layout_marginEnd="20dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/air_bnb_cereal_medium"
+            android:textColor="@color/colorBlack"
+            android:text="@{safetyMeasuresDetailsDTO.title}"
+            tools:text="Detail Image"
+            />
+
+
+
+        <!--
+
+                <FrameLayout
+                    android:id="@+id/image_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+        -->
+
+        <ImageView
+            android:id="@+id/detail_img"
+            imageUrl="@{safetyMeasuresDetailsDTO.outletSecMeasuresDetailImage.path}"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="@drawable/round_outline"
+            android:scaleType="centerCrop"
+            android:src="@drawable/person_placeholder" />
+        <!--
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|end"
+                        android:src="@drawable/ic_edit_white"
+                        app:tint="@color/colorBlack" />
+
+                </FrameLayout>
+        -->
+
+        <ImageView
+            android:id="@+id/remove_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="20dp"
+            android:src="@drawable/ic_baseline_remove_circle_24"
+            app:tint="@color/colorPrimary" />
+
+
+    </LinearLayout>
+
+</layout>
+
+
