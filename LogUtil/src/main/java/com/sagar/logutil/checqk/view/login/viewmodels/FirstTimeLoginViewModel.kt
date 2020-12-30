@@ -1,5 +1,6 @@
 package com.sagar.logutil.checqk.view.login.viewmodels
 
+//import com.google.firebase.messaging.FirebaseMessaging
 import android.app.Activity
 import android.app.Application
 import android.content.Context
@@ -12,8 +13,6 @@ import androidx.appcompat.app.AlertDialog
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.MutableLiveData
-import com.google.android.gms.tasks.OnCompleteListener
-import com.google.firebase.messaging.FirebaseMessaging
 import com.sagar.logutil.R
 import com.sagar.logutil.checqk.model.LoginDTO
 import com.sagar.logutil.checqk.model.LoginResponseDTO
@@ -54,7 +53,7 @@ class FirstTimeLoginViewModel : GenericBaseObservable {
     }
 
     private fun getFireBaseInstanceId(){
-        FirebaseMessaging.getInstance().token.addOnCompleteListener(OnCompleteListener { task ->
+        /*FirebaseMessaging.getInstance().token.addOnCompleteListener(OnCompleteListener { task ->
             if (!task.isSuccessful) {
 //                Log.w("TAG", "Fetching FCM registration token failed", task.exception)
                 return@OnCompleteListener
@@ -67,7 +66,7 @@ class FirstTimeLoginViewModel : GenericBaseObservable {
 //            val msg = getString(R.string.msg_token_fmt, token)
 //            Log.d("TAG", msg)
 //            Toast.makeText(context, msg, Toast.LENGTH_SHORT).show()
-        })
+        })*/
     }
 
     fun onSignUpClick() {
