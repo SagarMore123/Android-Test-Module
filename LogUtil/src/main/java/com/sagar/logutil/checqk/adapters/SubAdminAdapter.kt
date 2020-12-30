@@ -4,8 +4,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.astrika.checqk.model.SubAdminDTO
 import com.sagar.logutil.R
+import com.sagar.logutil.checqk.model.SubAdminDTO
 import com.sagar.logutil.databinding.SubAdminCellLayoutBinding
 
 class SubAdminAdapter(val listener: OnClickListener) :

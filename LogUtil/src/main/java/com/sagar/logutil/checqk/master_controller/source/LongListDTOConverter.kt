@@ -1,4 +1,4 @@
-package com.astrika.checqk.master_controller.source
+package com.sagar.logutil.checqk.master_controller.source
 
 import androidx.room.TypeConverter
 import com.google.gson.Gson

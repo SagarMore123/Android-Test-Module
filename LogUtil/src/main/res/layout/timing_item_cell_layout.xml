@@ -9,7 +9,7 @@
 
         <variable
             name="timingDTO"
-            type="com.astrika.checqk.model.TimingDTO" />
+            type="com.sagar.logutil.checqk.model.TimingDTO" />
 
     </data>
 

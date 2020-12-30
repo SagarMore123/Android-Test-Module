@@ -1,14 +1,14 @@
-package com.astrika.checqk
+package com.sagar.logutil.checqk
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
-import com.astrika.checqk.utils.Constants
-import com.astrika.checqk.utils.location.AddressWithLatLangDTO
-import com.astrika.checqk.utils.location.LocationActivity
 import com.google.android.gms.maps.*
 import com.google.android.gms.maps.model.LatLng
 import com.sagar.logutil.R
+import com.sagar.logutil.checqk.utils.Constants
+import com.sagar.logutil.checqk.utils.location.AddressWithLatLangDTO
+import com.sagar.logutil.checqk.utils.location.LocationActivity
 import com.sagar.logutil.databinding.ActivityMapsBinding
 
 

@@ -1,4 +1,4 @@
-package com.astrika.checqk.view.dashboard.fragments
+package com.sagar.logutil.checqk.view.dashboard.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,13 +8,13 @@ import androidx.core.content.ContextCompat
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
-import com.astrika.checqk.model.SubAdminDTO
-import com.astrika.checqk.utils.Constants
-import com.astrika.checqk.utils.CustomProgressBar
-import com.astrika.checqk.utils.Utils
-import com.astrika.checqk.view.dashboard.viewmodels.SubAdminViewModel
 import com.sagar.logutil.R
 import com.sagar.logutil.checqk.adapters.SubAdminAdapter
+import com.sagar.logutil.checqk.model.SubAdminDTO
+import com.sagar.logutil.checqk.utils.Constants
+import com.sagar.logutil.checqk.utils.CustomProgressBar
+import com.sagar.logutil.checqk.utils.Utils
+import com.sagar.logutil.checqk.view.dashboard.viewmodels.SubAdminViewModel
 import com.sagar.logutil.databinding.FragmentSubAdminBinding
 
 /**

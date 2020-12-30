@@ -1,11 +1,10 @@
-package com.astrika.checqk.network.network_utils
+package com.sagar.logutil.checqk.network.network_utils
 
 import android.content.Context
-import com.astrika.checqk.network.NetworkController
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
-import com.sagar.logutil.checqk.network.network_utils.TLSSocketFactory
+import com.sagar.logutil.checqk.network.NetworkController
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job

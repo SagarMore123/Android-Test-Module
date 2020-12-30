@@ -6,7 +6,7 @@
         <import type="android.view.View"/>
         <variable
             name="viewModel"
-            type="com.astrika.checqk.view.dashboard.viewmodels.TableConfigViewModel" />
+            type="com.sagar.logutil.checqk.view.dashboard.viewmodels.TableConfigViewModel" />
     </data>
 
     <LinearLayout

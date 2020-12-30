@@ -1,4 +1,4 @@
-package com.astrika.checqk.view.dashboard.viewmodels
+package com.sagar.logutil.checqk.view.dashboard.viewmodels
 
 import android.app.Activity
 import android.app.Application
@@ -7,16 +7,16 @@ import android.net.Uri
 import android.view.View
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.MutableLiveData
-import com.astrika.checqk.master_controller.source.MasterRepository
-import com.astrika.checqk.model.*
-import com.astrika.checqk.network.network_utils.IDataSourceCallback
-import com.astrika.checqk.source.DashboardRepository
-import com.astrika.checqk.utils.Constants
-import com.astrika.checqk.utils.ErrorCheckUtils
-import com.astrika.checqk.utils.GenericBaseObservable
-import com.astrika.checqk.utils.Utils
-import com.astrika.checqk.utils.location.AddressWithLatLangDTO
 import com.example.opposfeapp.utils.SingleLiveEvent
+import com.sagar.logutil.checqk.master_controller.source.MasterRepository
+import com.sagar.logutil.checqk.model.*
+import com.sagar.logutil.checqk.network.network_utils.IDataSourceCallback
+import com.sagar.logutil.checqk.source.DashboardRepository
+import com.sagar.logutil.checqk.utils.Constants
+import com.sagar.logutil.checqk.utils.ErrorCheckUtils
+import com.sagar.logutil.checqk.utils.GenericBaseObservable
+import com.sagar.logutil.checqk.utils.Utils
+import com.sagar.logutil.checqk.utils.location.AddressWithLatLangDTO
 
 class AddStaffUserDialogViewModel(
     var activity: Activity,

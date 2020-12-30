@@ -3,12 +3,12 @@
 
     To get one, follow this link, follow the directions and press "Create" at the end:
 
-    https://console.developers.google.com/flows/enableapi?apiid=maps_android_backend&keyType=CLIENT_SIDE_ANDROID&r=9B:B2:05:3F:26:40:18:DD:69:93:76:46:30:69:3C:61:CF:3B:39:6B%3Bcom.astrika.checqk
+    https://console.developers.google.com/flows/enableapi?apiid=maps_android_backend&keyType=CLIENT_SIDE_ANDROID&r=9B:B2:05:3F:26:40:18:DD:69:93:76:46:30:69:3C:61:CF:3B:39:6B%3Bcom.sagar.logutil.checqk
 
     You can also add your credentials to an existing key, using these values:
 
     Package name:
-    com.astrika.checqk
+    com.sagar.logutil.checqk
 
     SHA-1 certificate fingerprint:
     9B:B2:05:3F:26:40:18:DD:69:93:76:46:30:69:3C:61:CF:3B:39:6B

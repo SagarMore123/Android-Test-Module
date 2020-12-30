@@ -7,7 +7,7 @@
 
         <variable
             name="viewModel"
-            type="com.astrika.checqk.view.login.viewmodels.VerifyOtpViewModel" />
+            type="com.sagar.logutil.checqk.view.login.viewmodels.VerifyOtpViewModel" />
 
         <import type="android.view.View" />
 

@@ -1,4 +1,4 @@
-package com.astrika.checqk.utils
+package com.sagar.logutil.checqk.utils
 
 import android.text.SpannableStringBuilder
 import android.text.Spanned

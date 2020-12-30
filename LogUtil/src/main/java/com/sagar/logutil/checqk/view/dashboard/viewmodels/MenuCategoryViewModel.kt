@@ -1,4 +1,4 @@
-package com.astrika.checqk.view.dashboard.viewmodels
+package com.sagar.logutil.checqk.view.dashboard.viewmodels
 
 import android.app.Activity
 import android.app.Application
@@ -11,13 +11,13 @@ import androidx.appcompat.app.AlertDialog
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.MutableLiveData
-import com.astrika.checqk.model.CategoryCatalogueDTO
-import com.astrika.checqk.model.GetCatalogueCategoriesResponseDTO
-import com.astrika.checqk.network.network_utils.IDataSourceCallback
-import com.astrika.checqk.source.DashboardRepository
-import com.astrika.checqk.utils.Constants
-import com.astrika.checqk.utils.GenericBaseObservable
 import com.sagar.logutil.R
+import com.sagar.logutil.checqk.model.CategoryCatalogueDTO
+import com.sagar.logutil.checqk.model.GetCatalogueCategoriesResponseDTO
+import com.sagar.logutil.checqk.network.network_utils.IDataSourceCallback
+import com.sagar.logutil.checqk.source.DashboardRepository
+import com.sagar.logutil.checqk.utils.Constants
+import com.sagar.logutil.checqk.utils.GenericBaseObservable
 import com.sagar.logutil.databinding.AddMenuCategoryDialoagLayoutBinding
 
 class MenuCategoryViewModel : GenericBaseObservable {

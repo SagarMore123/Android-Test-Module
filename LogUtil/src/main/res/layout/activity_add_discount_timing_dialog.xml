@@ -9,7 +9,7 @@
 
         <variable
             name="addDiscountTimingViewModel"
-            type="com.astrika.checqk.view.AddDiscountTimingViewModel" />
+            type="com.sagar.logutil.checqk.view.AddDiscountTimingViewModel" />
     </data>
 
     <LinearLayout

@@ -1,4 +1,4 @@
-package com.astrika.checqk.view.signup
+package com.sagar.logutil.checqk.view.signup
 
 interface SignUp {
 

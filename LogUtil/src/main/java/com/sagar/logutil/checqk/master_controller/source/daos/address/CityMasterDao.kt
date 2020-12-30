@@ -1,10 +1,10 @@
-package com.astrika.checqk.master_controller.source.daos.address
+package com.sagar.logutil.checqk.master_controller.source.daos.address
 
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import com.astrika.checqk.model.CityMasterDTO
+import com.sagar.logutil.checqk.model.CityMasterDTO
 
 @Dao
 interface CityMasterDao {

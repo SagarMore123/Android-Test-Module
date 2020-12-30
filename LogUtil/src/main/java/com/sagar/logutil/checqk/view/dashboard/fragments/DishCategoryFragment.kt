@@ -1,4 +1,4 @@
-package com.astrika.checqk.view.dashboard.fragments
+package com.sagar.logutil.checqk.view.dashboard.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,16 +9,16 @@ import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.astrika.checqk.model.CatalogueSectionDTO
-import com.astrika.checqk.model.ProductDetailsDTO
-import com.astrika.checqk.model.ProductWithSectionDetails
-import com.astrika.checqk.utils.CustomProgressBar
-import com.astrika.checqk.utils.Utils
-import com.astrika.checqk.view.dashboard.viewmodels.DishCategoryViewModel
 import com.sagar.logutil.R
 import com.sagar.logutil.checqk.adapters.DishCategoryAdapter
 import com.sagar.logutil.checqk.adapters.DishListAdapter
 import com.sagar.logutil.checqk.adapters.MenuCategoryHorizontalListAdapter
+import com.sagar.logutil.checqk.model.CatalogueSectionDTO
+import com.sagar.logutil.checqk.model.ProductDetailsDTO
+import com.sagar.logutil.checqk.model.ProductWithSectionDetails
+import com.sagar.logutil.checqk.utils.CustomProgressBar
+import com.sagar.logutil.checqk.utils.Utils
+import com.sagar.logutil.checqk.view.dashboard.viewmodels.DishCategoryViewModel
 import com.sagar.logutil.databinding.FragmentDishCategoryBinding
 
 class DishCategoryFragment : Fragment(),

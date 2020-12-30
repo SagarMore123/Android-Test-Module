@@ -1,13 +1,13 @@
-package com.astrika.checqk.view
+package com.sagar.logutil.checqk.view
 
 import android.app.Activity
 import android.app.Application
 import android.view.View
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.MutableLiveData
-import com.astrika.checqk.model.DiscountDaysTimingDTO
-import com.astrika.checqk.utils.GenericBaseObservable
 import com.example.opposfeapp.utils.SingleLiveEvent
+import com.sagar.logutil.checqk.model.DiscountDaysTimingDTO
+import com.sagar.logutil.checqk.utils.GenericBaseObservable
 
 class AddDiscountTimingViewModel(
     var activity: Activity,

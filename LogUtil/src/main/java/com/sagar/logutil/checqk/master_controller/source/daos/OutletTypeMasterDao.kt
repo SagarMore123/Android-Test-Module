@@ -1,11 +1,11 @@
-package com.astrika.checqk.master_controller.source.daos
+package com.sagar.logutil.checqk.master_controller.source.daos
 
 
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import com.astrika.checqk.model.OutletTypeMasterDTO
+import com.sagar.logutil.checqk.model.OutletTypeMasterDTO
 
 
 @Dao

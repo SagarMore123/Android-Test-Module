@@ -6,7 +6,7 @@ import android.text.TextWatcher
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.astrika.checqk.model.StaffSafetyReadingDTO
+import com.sagar.logutil.checqk.model.StaffSafetyReadingDTO
 import com.sagar.logutil.databinding.StaffSafetyReadingCellLayoutBinding
 
 

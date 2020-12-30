@@ -8,32 +8,32 @@
 
     <fragment
         android:id="@+id/MembershipDiscountFragment"
-        android:name="com.astrika.checqk.view.discount.fragments.MembershipDiscountFragment"
+        android:name="com.sagar.logutil.checqk.view.discount.fragments.MembershipDiscountFragment"
         tools:layout="@layout/fragment_membership_discount">
 
     </fragment>
 
     <fragment
         android:id="@+id/CravXCardDiscountFragment"
-        android:name="com.astrika.checqk.view.discount.fragments.CravXCardDiscountFragment"
+        android:name="com.sagar.logutil.checqk.view.discount.fragments.CravXCardDiscountFragment"
         tools:layout="@layout/fragment_cravx_card_discount">
 
     </fragment>
 
     <fragment
         android:id="@+id/HungryWungryDiscountFragment"
-        android:name="com.astrika.checqk.view.discount.fragments.HungryWungryDiscountFragment"
+        android:name="com.sagar.logutil.checqk.view.discount.fragments.HungryWungryDiscountFragment"
         android:label="fragment_hungry_wungry_discount"
         tools:layout="@layout/fragment_hungry_wungry_discount" />
 
     <fragment
         android:id="@+id/OneDashboardFragment"
-        android:name="com.astrika.checqk.view.discount.fragments.OneDashboardFragment"
+        android:name="com.sagar.logutil.checqk.view.discount.fragments.OneDashboardFragment"
         android:label="fragment_one_dashboard"
         tools:layout="@layout/fragment_one_dashboard" />
     <fragment
         android:id="@+id/InHouseCardsFragment"
-        android:name="com.astrika.checqk.view.discount.fragments.InHouseCardsFragment"
+        android:name="com.sagar.logutil.checqk.view.discount.fragments.InHouseCardsFragment"
         android:label="fragment_in_house_cards"
         tools:layout="@layout/fragment_in_house_cards" />
 

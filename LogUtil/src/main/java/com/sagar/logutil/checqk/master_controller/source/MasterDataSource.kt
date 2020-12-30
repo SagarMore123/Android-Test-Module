@@ -1,9 +1,9 @@
-package com.astrika.checqk.master_controller.source
+package com.sagar.logutil.checqk.master_controller.source
 
 import androidx.annotation.NonNull
-import com.astrika.checqk.model.*
-import com.astrika.checqk.model.discount.*
-import com.astrika.checqk.network.network_utils.IDataSourceCallback
+import com.sagar.logutil.checqk.model.*
+import com.sagar.logutil.checqk.model.discount.*
+import com.sagar.logutil.checqk.network.network_utils.IDataSourceCallback
 
 abstract class MasterDataSource {
 

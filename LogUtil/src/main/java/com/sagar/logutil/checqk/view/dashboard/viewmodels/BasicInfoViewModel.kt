@@ -1,4 +1,4 @@
-package com.astrika.checqk.view.dashboard.viewmodels
+package com.sagar.logutil.checqk.view.dashboard.viewmodels
 
 import android.app.Activity
 import android.app.Application
@@ -7,15 +7,15 @@ import android.view.View
 import androidx.databinding.ObservableBoolean
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.MutableLiveData
-import com.astrika.checqk.master_controller.source.MasterRepository
-import com.astrika.checqk.master_controller.source.daos.SystemValueMasterDao
-import com.astrika.checqk.model.*
-import com.astrika.checqk.network.network_utils.IDataSourceCallback
-import com.astrika.checqk.utils.Constants
-import com.astrika.checqk.utils.GenericBaseObservable
-import com.astrika.checqk.view.login.UserLoginActivity
-import com.astrika.checqk.view.login.remote.UserRepository
 import com.example.opposfeapp.utils.SingleLiveEvent
+import com.sagar.logutil.checqk.master_controller.source.MasterRepository
+import com.sagar.logutil.checqk.master_controller.source.daos.SystemValueMasterDao
+import com.sagar.logutil.checqk.model.*
+import com.sagar.logutil.checqk.network.network_utils.IDataSourceCallback
+import com.sagar.logutil.checqk.utils.Constants
+import com.sagar.logutil.checqk.utils.GenericBaseObservable
+import com.sagar.logutil.checqk.view.login.UserLoginActivity
+import com.sagar.logutil.checqk.view.login.remote.UserRepository
 import com.sagar.logutil.databinding.BasicInfoFacilityMastersItemCellLayoutBinding
 import java.math.BigDecimal
 

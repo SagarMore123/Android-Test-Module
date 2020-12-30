@@ -1,4 +1,4 @@
-package com.astrika.checqk.view.dashboard.fragments
+package com.sagar.logutil.checqk.view.dashboard.fragments
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,18 +8,18 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
-import com.astrika.checqk.model.DayDTO
-import com.astrika.checqk.model.DiscountDaysTimingDTO
-import com.astrika.checqk.model.SystemValueMasterDTO
-import com.astrika.checqk.model.discount.DiscountCategoryDTO
-import com.astrika.checqk.model.discount.OutletDiscountMembershipPlanDTO
-import com.astrika.checqk.utils.Constants
-import com.astrika.checqk.utils.Utils
-import com.astrika.checqk.view.AddDiscountTimingDialogActivity
-import com.astrika.checqk.view.discount.viewmodels.DiscountViewModel
 import com.sagar.logutil.R
 import com.sagar.logutil.checqk.adapters.DaysAdapter
 import com.sagar.logutil.checqk.adapters.discount.*
+import com.sagar.logutil.checqk.model.DayDTO
+import com.sagar.logutil.checqk.model.DiscountDaysTimingDTO
+import com.sagar.logutil.checqk.model.SystemValueMasterDTO
+import com.sagar.logutil.checqk.model.discount.DiscountCategoryDTO
+import com.sagar.logutil.checqk.model.discount.OutletDiscountMembershipPlanDTO
+import com.sagar.logutil.checqk.utils.Constants
+import com.sagar.logutil.checqk.utils.Utils
+import com.sagar.logutil.checqk.view.AddDiscountTimingDialogActivity
+import com.sagar.logutil.checqk.view.discount.viewmodels.DiscountViewModel
 import com.sagar.logutil.databinding.FragmentDiscountBinding
 
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER

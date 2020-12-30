@@ -1,11 +1,11 @@
-package com.astrika.checqk.master_controller.source.daos
+package com.sagar.logutil.checqk.master_controller.source.daos
 
 import androidx.annotation.StringDef
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import com.astrika.checqk.model.SystemValueMasterDTO
+import com.sagar.logutil.checqk.model.SystemValueMasterDTO
 
 @Dao
 interface SystemValueMasterDao {

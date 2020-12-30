@@ -4,8 +4,8 @@ import android.app.Activity
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.astrika.checqk.model.SafetyMeasuresDetailsDTO
 import com.sagar.logutil.R
+import com.sagar.logutil.checqk.model.SafetyMeasuresDetailsDTO
 import com.sagar.logutil.databinding.SafetyMeasuresDetailsItemCellLayoutBinding
 
 class SafetyMeasuresDetailsAdapter(

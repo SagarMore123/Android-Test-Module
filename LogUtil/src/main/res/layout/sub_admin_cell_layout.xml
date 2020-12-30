@@ -7,7 +7,7 @@
 
         <variable
             name="subAdminDTO"
-            type="com.astrika.checqk.model.SubAdminDTO" />
+            type="com.sagar.logutil.checqk.model.SubAdminDTO" />
 
     </data>
 

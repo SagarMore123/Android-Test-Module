@@ -1,9 +1,9 @@
-package com.astrika.checqk.network
+package com.sagar.logutil.checqk.network
 
-import com.astrika.checqk.network.network_utils.NetworkUtils.Companion.retrofit
-import com.astrika.checqk.network.services.DashboardService
-import com.astrika.checqk.network.services.MastersService
-import com.astrika.checqk.network.services.UserService
+import com.sagar.logutil.checqk.network.network_utils.NetworkUtils.Companion.retrofit
+import com.sagar.logutil.checqk.network.services.DashboardService
+import com.sagar.logutil.checqk.network.services.MastersService
+import com.sagar.logutil.checqk.network.services.UserService
 
 object UserApi {
 

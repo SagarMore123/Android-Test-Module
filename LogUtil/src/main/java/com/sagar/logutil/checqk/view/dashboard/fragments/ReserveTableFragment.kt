@@ -1,4 +1,4 @@
-package com.astrika.checqk.view.dashboard.fragments
+package com.sagar.logutil.checqk.view.dashboard.fragments
 
 import android.content.Context
 import android.os.Bundle
@@ -8,12 +8,12 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
-import com.astrika.checqk.model.BookingDTO
-import com.astrika.checqk.utils.CustomProgressBar
-import com.astrika.checqk.utils.Utils
-import com.astrika.checqk.view.dashboard.viewmodels.ReservedTableViewModel
 import com.sagar.logutil.R
 import com.sagar.logutil.checqk.adapters.ReservedTableAdapter
+import com.sagar.logutil.checqk.model.BookingDTO
+import com.sagar.logutil.checqk.utils.CustomProgressBar
+import com.sagar.logutil.checqk.utils.Utils
+import com.sagar.logutil.checqk.view.dashboard.viewmodels.ReservedTableViewModel
 import com.sagar.logutil.databinding.FragmentReserveTableBinding
 
 class ReserveTableFragment : Fragment(), ReservedTableAdapter.OnItemClickListener {

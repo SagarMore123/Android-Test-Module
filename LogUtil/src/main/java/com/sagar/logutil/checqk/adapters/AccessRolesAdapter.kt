@@ -5,8 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.astrika.checqk.model.PermissionDTO
 import com.sagar.logutil.R
+import com.sagar.logutil.checqk.model.PermissionDTO
 import com.sagar.logutil.databinding.AccessRoleListCellLayoutBinding
 
 

@@ -9,7 +9,7 @@
 
         <variable
             name="safetyMeasuresDetailsDTO"
-            type="com.astrika.checqk.model.SafetyMeasuresDetailsDTO" />
+            type="com.sagar.logutil.checqk.model.SafetyMeasuresDetailsDTO" />
 
     </data>
 

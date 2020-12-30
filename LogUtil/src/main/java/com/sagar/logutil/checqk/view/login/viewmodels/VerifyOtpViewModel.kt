@@ -1,4 +1,4 @@
-package com.astrika.checqk.view.login.viewmodels
+package com.sagar.logutil.checqk.view.login.viewmodels
 
 import android.app.Activity
 import android.app.Application
@@ -7,14 +7,14 @@ import android.os.CountDownTimer
 import android.view.View
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.MutableLiveData
-import com.astrika.checqk.model.LoginDTO
-import com.astrika.checqk.model.LoginResponseDTO
-import com.astrika.checqk.network.network_utils.IDataSourceCallback
-import com.astrika.checqk.utils.Constants
-import com.astrika.checqk.utils.ErrorCheckUtils
-import com.astrika.checqk.utils.GenericBaseObservable
-import com.astrika.checqk.view.login.remote.UserRepository
-import com.astrika.checqk.view.signup.SignUpActivity
+import com.sagar.logutil.checqk.model.LoginDTO
+import com.sagar.logutil.checqk.model.LoginResponseDTO
+import com.sagar.logutil.checqk.network.network_utils.IDataSourceCallback
+import com.sagar.logutil.checqk.utils.Constants
+import com.sagar.logutil.checqk.utils.ErrorCheckUtils
+import com.sagar.logutil.checqk.utils.GenericBaseObservable
+import com.sagar.logutil.checqk.view.login.remote.UserRepository
+import com.sagar.logutil.checqk.view.signup.SignUpActivity
 import java.util.concurrent.TimeUnit
 
 class VerifyOtpViewModel : GenericBaseObservable{

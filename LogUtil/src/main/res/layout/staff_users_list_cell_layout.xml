@@ -13,7 +13,7 @@
 
         <variable
             name="staffUser"
-            type="com.astrika.checqk.model.UserDTO" />
+            type="com.sagar.logutil.checqk.model.UserDTO" />
 
     </data>
 

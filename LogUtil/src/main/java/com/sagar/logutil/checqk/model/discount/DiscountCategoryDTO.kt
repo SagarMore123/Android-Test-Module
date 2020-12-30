@@ -1,4 +1,4 @@
-package com.astrika.checqk.model.discount
+package com.sagar.logutil.checqk.model.discount
 
 class DiscountCategoryDTO {
     var outletDiscountCategoryId: Long = 0

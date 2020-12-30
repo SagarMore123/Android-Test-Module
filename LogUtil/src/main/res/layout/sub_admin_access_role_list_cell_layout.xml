@@ -13,7 +13,7 @@
 
         <variable
             name="groupRole"
-            type="com.astrika.checqk.model.AccessRoleDTO" />
+            type="com.sagar.logutil.checqk.model.AccessRoleDTO" />
     </data>
 
 

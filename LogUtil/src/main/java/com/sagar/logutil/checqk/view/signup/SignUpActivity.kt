@@ -1,4 +1,4 @@
-package com.astrika.checqk.view.signup
+package com.sagar.logutil.checqk.view.signup
 
 import android.content.Context
 import android.content.Intent
@@ -6,12 +6,12 @@ import android.os.Bundle
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
-import com.astrika.checqk.master_controller.sync.MasterSyncIntentService
-import com.astrika.checqk.utils.Utils
-import com.astrika.checqk.utils.location.LocationActivity
-import com.astrika.checqk.view.signup.viewmodels.SignUpViewModel
 import com.sagar.logutil.R
 import com.sagar.logutil.checqk.adapters.PageIndicatorAdapter
+import com.sagar.logutil.checqk.master_controller.sync.MasterSyncIntentService
+import com.sagar.logutil.checqk.utils.Utils
+import com.sagar.logutil.checqk.utils.location.LocationActivity
+import com.sagar.logutil.checqk.view.signup.viewmodels.SignUpViewModel
 import com.sagar.logutil.databinding.ActivitySignUpBinding
 
 class SignUpActivity : LocationActivity(), SignUp, PageIndicatorAdapter.OnItemClickListener {

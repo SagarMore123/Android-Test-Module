@@ -1,4 +1,4 @@
-package com.astrika.checqk.view.signup.fragments
+package com.sagar.logutil.checqk.view.signup.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,15 +8,15 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
-import com.astrika.checqk.model.DayDTO
-import com.astrika.checqk.model.TimingDTO
-import com.astrika.checqk.utils.CustomProgressBar
-import com.astrika.checqk.utils.Utils
-import com.astrika.checqk.view.signup.SignUp
-import com.astrika.checqk.view.signup.viewmodels.TimingViewModel
 import com.sagar.logutil.R
 import com.sagar.logutil.checqk.adapters.DaysAdapter
 import com.sagar.logutil.checqk.adapters.TimingsAdapter
+import com.sagar.logutil.checqk.model.DayDTO
+import com.sagar.logutil.checqk.model.TimingDTO
+import com.sagar.logutil.checqk.utils.CustomProgressBar
+import com.sagar.logutil.checqk.utils.Utils
+import com.sagar.logutil.checqk.view.signup.SignUp
+import com.sagar.logutil.checqk.view.signup.viewmodels.TimingViewModel
 import com.sagar.logutil.databinding.FragmentPreLoginTimingsBinding
 
 /**

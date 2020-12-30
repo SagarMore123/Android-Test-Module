@@ -1,4 +1,4 @@
-package com.astrika.checqk.utils
+package com.sagar.logutil.checqk.utils
 
 import com.google.gson.GsonBuilder
 import com.google.gson.JsonDeserializer

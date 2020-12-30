@@ -7,7 +7,7 @@
 
         <variable
             name="viewModel"
-            type="com.astrika.checqk.view.signup.viewmodels.TimingViewModel" />
+            type="com.sagar.logutil.checqk.view.signup.viewmodels.TimingViewModel" />
 
         <import type="android.view.View" />
 

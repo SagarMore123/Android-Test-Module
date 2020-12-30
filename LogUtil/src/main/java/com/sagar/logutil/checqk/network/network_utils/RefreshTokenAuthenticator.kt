@@ -1,13 +1,13 @@
-package com.astrika.checqk.network.network_utils
+package com.sagar.logutil.checqk.network.network_utils
 
 import android.content.Context
 import android.content.Intent
 import android.util.Log
-import com.astrika.checqk.model.RefreshTokenDTO
-import com.astrika.checqk.network.NetworkController
-import com.astrika.checqk.network.UserApi
-import com.astrika.checqk.utils.Constants
-import com.astrika.checqk.view.login.UserLoginActivity
+import com.sagar.logutil.checqk.model.RefreshTokenDTO
+import com.sagar.logutil.checqk.network.NetworkController
+import com.sagar.logutil.checqk.network.UserApi
+import com.sagar.logutil.checqk.utils.Constants
+import com.sagar.logutil.checqk.view.login.UserLoginActivity
 import okhttp3.Authenticator
 import okhttp3.Request
 import okhttp3.Response

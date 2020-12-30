@@ -1,8 +1,8 @@
-package com.astrika.checqk.source
+package com.sagar.logutil.checqk.source
 
 import android.app.Application
-import com.astrika.checqk.model.*
-import com.astrika.checqk.network.network_utils.IDataSourceCallback
+import com.sagar.logutil.checqk.model.*
+import com.sagar.logutil.checqk.network.network_utils.IDataSourceCallback
 
 class DashboardRepository(private var mDashboardDataSource: DashboardDataSource?) : DashboardDataSource {
 

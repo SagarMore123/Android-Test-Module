@@ -1,15 +1,15 @@
-package com.astrika.checqk.view.login
+package com.sagar.logutil.checqk.view.login
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
-import com.astrika.checqk.master_controller.sync.SyncData
-import com.astrika.checqk.network.NetworkController
-import com.astrika.checqk.utils.Constants
-import com.astrika.checqk.utils.CustomProgressBar
 import com.example.opposfeapp.utils.SnackbarUtils.showSnackbar
 import com.sagar.logutil.R
+import com.sagar.logutil.checqk.master_controller.sync.SyncData
+import com.sagar.logutil.checqk.network.NetworkController
+import com.sagar.logutil.checqk.utils.Constants
+import com.sagar.logutil.checqk.utils.CustomProgressBar
 import com.sagar.logutil.checqk.view.dashboard.DashboardActivity
 import kotlinx.android.synthetic.main.activity_login.*
 

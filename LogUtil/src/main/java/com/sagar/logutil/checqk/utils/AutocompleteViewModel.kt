@@ -1,4 +1,4 @@
-package com.astrika.checqk.utils
+package com.sagar.logutil.checqk.utils
 
 import android.app.Activity
 import android.app.Application
@@ -6,10 +6,10 @@ import android.view.View
 import androidx.databinding.ObservableBoolean
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.MutableLiveData
-import com.astrika.checqk.master_controller.source.MasterRepository
-import com.astrika.checqk.model.*
-import com.astrika.checqk.model.discount.CorporateMembershipOneDashboardDTO
-import com.astrika.checqk.network.network_utils.IDataSourceCallback
+import com.sagar.logutil.checqk.master_controller.source.MasterRepository
+import com.sagar.logutil.checqk.model.*
+import com.sagar.logutil.checqk.model.discount.CorporateMembershipOneDashboardDTO
+import com.sagar.logutil.checqk.network.network_utils.IDataSourceCallback
 
 class AutocompleteViewModel(
     var activity: Activity,

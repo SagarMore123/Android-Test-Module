@@ -6,7 +6,7 @@
 
         <variable
             name="menuSectionDTO"
-            type="com.astrika.checqk.model.CatalogueSectionDTO" />
+            type="com.sagar.logutil.checqk.model.CatalogueSectionDTO" />
 
         <import type="android.view.View"/>
 

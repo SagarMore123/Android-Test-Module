@@ -1,8 +1,8 @@
-package com.astrika.checqk.network.services
+package com.sagar.logutil.checqk.network.services
 
-import com.astrika.checqk.model.*
-import com.astrika.checqk.model.discount.OutletDiscountDetailsDTO
-import com.astrika.checqk.network.network_utils.*
+import com.sagar.logutil.checqk.model.*
+import com.sagar.logutil.checqk.model.discount.OutletDiscountDetailsDTO
+import com.sagar.logutil.checqk.network.network_utils.*
 import okhttp3.ResponseBody
 import retrofit2.Call
 import retrofit2.http.*

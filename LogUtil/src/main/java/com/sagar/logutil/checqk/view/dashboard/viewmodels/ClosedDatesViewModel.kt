@@ -1,4 +1,4 @@
-package com.astrika.checqk.view.dashboard.viewmodels
+package com.sagar.logutil.checqk.view.dashboard.viewmodels
 
 import android.app.Activity
 import android.app.Application
@@ -8,13 +8,13 @@ import android.view.View
 import androidx.databinding.ObservableField
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.MutableLiveData
-import com.astrika.checqk.model.*
-import com.astrika.checqk.network.network_utils.IDataSourceCallback
-import com.astrika.checqk.utils.Constants
-import com.astrika.checqk.utils.GenericBaseObservable
-import com.astrika.checqk.utils.Utils
-import com.astrika.checqk.view.login.UserLoginActivity
-import com.astrika.checqk.view.login.remote.UserRepository
+import com.sagar.logutil.checqk.model.*
+import com.sagar.logutil.checqk.network.network_utils.IDataSourceCallback
+import com.sagar.logutil.checqk.utils.Constants
+import com.sagar.logutil.checqk.utils.GenericBaseObservable
+import com.sagar.logutil.checqk.utils.Utils
+import com.sagar.logutil.checqk.view.login.UserLoginActivity
+import com.sagar.logutil.checqk.view.login.remote.UserRepository
 
 class ClosedDatesViewModel(
     var activity: Activity,

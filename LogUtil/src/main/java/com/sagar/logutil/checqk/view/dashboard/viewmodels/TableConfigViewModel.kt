@@ -1,4 +1,4 @@
-package com.astrika.checqk.view.dashboard.viewmodels
+package com.sagar.logutil.checqk.view.dashboard.viewmodels
 
 import android.app.Activity
 import android.app.Application
@@ -13,16 +13,16 @@ import android.view.Window
 import android.widget.*
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.MutableLiveData
-import com.astrika.checqk.master_controller.source.MasterRepository
-import com.astrika.checqk.master_controller.source.daos.SystemValueMasterDao
-import com.astrika.checqk.model.*
-import com.astrika.checqk.network.network_utils.IDataSourceCallback
-import com.astrika.checqk.network.network_utils.SERVER_IMG_URL
-import com.astrika.checqk.source.DashboardRepository
-import com.astrika.checqk.utils.Constants
-import com.astrika.checqk.utils.GenericBaseObservable
 import com.bumptech.glide.Glide
 import com.sagar.logutil.R
+import com.sagar.logutil.checqk.master_controller.source.MasterRepository
+import com.sagar.logutil.checqk.master_controller.source.daos.SystemValueMasterDao
+import com.sagar.logutil.checqk.model.*
+import com.sagar.logutil.checqk.network.network_utils.IDataSourceCallback
+import com.sagar.logutil.checqk.network.network_utils.SERVER_IMG_URL
+import com.sagar.logutil.checqk.source.DashboardRepository
+import com.sagar.logutil.checqk.utils.Constants
+import com.sagar.logutil.checqk.utils.GenericBaseObservable
 import io.github.hyuwah.draggableviewlib.Draggable
 import io.github.hyuwah.draggableviewlib.DraggableListener
 import io.github.hyuwah.draggableviewlib.makeDraggable

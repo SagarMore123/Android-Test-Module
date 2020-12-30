@@ -1,6 +1,6 @@
-package com.astrika.checqk.model
+package com.sagar.logutil.checqk.model
 
-import com.astrika.checqk.utils.Constants
+import com.sagar.logutil.checqk.utils.Constants
 
 class LoginDTO {
 

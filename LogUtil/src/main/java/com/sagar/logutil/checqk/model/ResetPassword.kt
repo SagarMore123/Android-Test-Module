@@ -1,4 +1,4 @@
-package com.astrika.checqk.model
+package com.sagar.logutil.checqk.model
 
 class ResetPassword {
 

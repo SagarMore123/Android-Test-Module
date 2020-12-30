@@ -1,4 +1,4 @@
-package com.astrika.checqk.view
+package com.sagar.logutil.checqk.view
 
 import android.content.Intent
 import android.content.res.ColorStateList
@@ -11,10 +11,10 @@ import android.text.style.TextAppearanceSpan
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
-import com.astrika.checqk.model.DiscountDaysTimingDTO
-import com.astrika.checqk.utils.Constants
-import com.astrika.checqk.utils.Utils
 import com.sagar.logutil.R
+import com.sagar.logutil.checqk.model.DiscountDaysTimingDTO
+import com.sagar.logutil.checqk.utils.Constants
+import com.sagar.logutil.checqk.utils.Utils
 import com.sagar.logutil.databinding.ActivityAddDiscountTimingDialogBinding
 
 class AddDiscountTimingDialogActivity : AppCompatActivity() {

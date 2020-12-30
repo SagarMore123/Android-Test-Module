@@ -1,4 +1,4 @@
-package com.astrika.checqk.view.dashboard.fragments
+package com.sagar.logutil.checqk.view.dashboard.fragments
 
 import android.app.Activity.RESULT_OK
 import android.content.Intent
@@ -9,19 +9,19 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
-import com.astrika.checqk.model.ClosedDatesDTO
-import com.astrika.checqk.model.DayDTO
-import com.astrika.checqk.model.SafetyMeasuresDetailsDTO
-import com.astrika.checqk.model.TimingDTO
-import com.astrika.checqk.utils.CustomProgressBar
-import com.astrika.checqk.utils.Utils
-import com.astrika.checqk.view.dashboard.viewmodels.ClosedDatesViewModel
-import com.astrika.checqk.view.signup.viewmodels.TimingViewModel
 import com.sagar.logutil.R
 import com.sagar.logutil.checqk.adapters.ClosedDatesAdapter
 import com.sagar.logutil.checqk.adapters.DaysAdapter
 import com.sagar.logutil.checqk.adapters.SafetyMeasuresDetailsAdapter
 import com.sagar.logutil.checqk.adapters.TimingsAdapter
+import com.sagar.logutil.checqk.model.ClosedDatesDTO
+import com.sagar.logutil.checqk.model.DayDTO
+import com.sagar.logutil.checqk.model.SafetyMeasuresDetailsDTO
+import com.sagar.logutil.checqk.model.TimingDTO
+import com.sagar.logutil.checqk.utils.CustomProgressBar
+import com.sagar.logutil.checqk.utils.Utils
+import com.sagar.logutil.checqk.view.dashboard.viewmodels.ClosedDatesViewModel
+import com.sagar.logutil.checqk.view.signup.viewmodels.TimingViewModel
 import com.sagar.logutil.databinding.FragmentPostLoginTimingsBinding
 import com.theartofdev.edmodo.cropper.CropImage
 

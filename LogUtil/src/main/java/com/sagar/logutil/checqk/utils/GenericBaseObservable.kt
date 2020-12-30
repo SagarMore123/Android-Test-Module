@@ -1,4 +1,4 @@
-package com.astrika.checqk.utils
+package com.sagar.logutil.checqk.utils
 
 import android.app.Application
 import android.content.Context

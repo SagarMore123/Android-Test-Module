@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.astrika.checqk.view.login.fragments.LoginFragment"
+        android:name="com.sagar.logutil.checqk.view.login.fragments.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login">
         <action
@@ -20,7 +20,7 @@
     </fragment>
     <fragment
         android:id="@+id/verifyOtpFragment"
-        android:name="com.astrika.checqk.view.login.fragments.VerifyOtpFragment"
+        android:name="com.sagar.logutil.checqk.view.login.fragments.VerifyOtpFragment"
         android:label="fragment_verify_otp"
         tools:layout="@layout/fragment_verify_otp">
         <action
@@ -32,7 +32,7 @@
     </fragment>
     <fragment
         android:id="@+id/setPasswordFragment"
-        android:name="com.astrika.checqk.view.login.fragments.SetPasswordFragment"
+        android:name="com.sagar.logutil.checqk.view.login.fragments.SetPasswordFragment"
         android:label="fragment_set_password"
         tools:layout="@layout/fragment_set_password">
         <action
@@ -44,7 +44,7 @@
     </fragment>
     <fragment
         android:id="@+id/loginFragmentWithPassword"
-        android:name="com.astrika.checqk.view.login.fragments.LoginFragmentWithPassword"
+        android:name="com.sagar.logutil.checqk.view.login.fragments.LoginFragmentWithPassword"
         android:label="fragment_login_with_password"
         tools:layout="@layout/fragment_login_with_password">
         <action
@@ -56,7 +56,7 @@
     </fragment>
     <fragment
         android:id="@+id/forgotPasswordFragment"
-        android:name="com.astrika.checqk.view.login.fragments.ForgotPasswordFragment"
+        android:name="com.sagar.logutil.checqk.view.login.fragments.ForgotPasswordFragment"
         android:label="fragment_forgot_password"
         tools:layout="@layout/fragment_forgot_password" >
         <action

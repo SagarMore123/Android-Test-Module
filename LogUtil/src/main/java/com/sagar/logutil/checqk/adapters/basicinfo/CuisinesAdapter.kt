@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.astrika.checqk.model.CuisineMasterDTO
+import com.sagar.logutil.checqk.model.CuisineMasterDTO
 import com.sagar.logutil.databinding.BasicInfoMastersItemCellLayoutBinding
 
 class CuisinesAdapter(

@@ -7,8 +7,8 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.astrika.checqk.model.ProductWithSectionDetails
 import com.sagar.logutil.R
+import com.sagar.logutil.checqk.model.ProductWithSectionDetails
 import com.sagar.logutil.databinding.DishCategoryListCellLayoutBinding
 
 

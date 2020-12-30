@@ -6,7 +6,7 @@
     <data>
         <variable
             name="dishMenuSection"
-            type="com.astrika.checqk.model.ProductWithSectionDetails" />
+            type="com.sagar.logutil.checqk.model.ProductWithSectionDetails" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

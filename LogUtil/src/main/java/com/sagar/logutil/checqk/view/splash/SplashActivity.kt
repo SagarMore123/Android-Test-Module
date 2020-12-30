@@ -1,16 +1,16 @@
-package com.astrika.checqk.view.splash
+package com.sagar.logutil.checqk.view.splash
 
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
-import com.astrika.checqk.master_controller.sync.MasterSyncIntentService
-import com.astrika.checqk.utils.Constants
-import com.astrika.checqk.utils.RootUtil
-import com.astrika.checqk.view.login.UserLoginActivity
 import com.sagar.logutil.R
+import com.sagar.logutil.checqk.master_controller.sync.MasterSyncIntentService
+import com.sagar.logutil.checqk.utils.Constants
+import com.sagar.logutil.checqk.utils.RootUtil
 import com.sagar.logutil.checqk.view.dashboard.DashboardActivity
+import com.sagar.logutil.checqk.view.login.UserLoginActivity
 
 class SplashActivity : AppCompatActivity() {
 

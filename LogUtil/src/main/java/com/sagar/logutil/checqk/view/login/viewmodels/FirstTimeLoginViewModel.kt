@@ -1,4 +1,4 @@
-package com.astrika.checqk.view.login.viewmodels
+package com.sagar.logutil.checqk.view.login.viewmodels
 
 import android.app.Activity
 import android.app.Application
@@ -12,17 +12,17 @@ import androidx.appcompat.app.AlertDialog
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.MutableLiveData
-import com.astrika.checqk.model.LoginDTO
-import com.astrika.checqk.model.LoginResponseDTO
-import com.astrika.checqk.network.network_utils.IDataSourceCallback
-import com.astrika.checqk.utils.Constants
-import com.astrika.checqk.utils.ErrorCheckUtils
-import com.astrika.checqk.utils.GenericBaseObservable
-import com.astrika.checqk.view.login.remote.UserRepository
-import com.astrika.checqk.view.signup.SignUpActivity
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.messaging.FirebaseMessaging
 import com.sagar.logutil.R
+import com.sagar.logutil.checqk.model.LoginDTO
+import com.sagar.logutil.checqk.model.LoginResponseDTO
+import com.sagar.logutil.checqk.network.network_utils.IDataSourceCallback
+import com.sagar.logutil.checqk.utils.Constants
+import com.sagar.logutil.checqk.utils.ErrorCheckUtils
+import com.sagar.logutil.checqk.utils.GenericBaseObservable
+import com.sagar.logutil.checqk.view.login.remote.UserRepository
+import com.sagar.logutil.checqk.view.signup.SignUpActivity
 import com.sagar.logutil.databinding.AlreadyLoginPopupLayoutBinding
 import java.util.*
 

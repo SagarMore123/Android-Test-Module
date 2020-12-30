@@ -5,10 +5,10 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.astrika.checqk.master_controller.source.MasterRepository
-import com.astrika.checqk.model.CuisineMasterDTO
-import com.astrika.checqk.model.FamousDishesDTO
-import com.astrika.checqk.network.network_utils.IDataSourceCallback
+import com.sagar.logutil.checqk.master_controller.source.MasterRepository
+import com.sagar.logutil.checqk.model.CuisineMasterDTO
+import com.sagar.logutil.checqk.model.FamousDishesDTO
+import com.sagar.logutil.checqk.network.network_utils.IDataSourceCallback
 import com.sagar.logutil.databinding.FamousDishesItemCellLayoutBinding
 
 class FamousDishesAdapter(

@@ -1,9 +1,9 @@
-package com.astrika.checqk.master_controller.source
+package com.sagar.logutil.checqk.master_controller.source
 
 import androidx.room.TypeConverter
-import com.astrika.checqk.model.ImageDTO
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
+import com.sagar.logutil.checqk.model.ImageDTO
 
 class ImageDTOConverter {
 

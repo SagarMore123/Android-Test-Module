@@ -1,18 +1,18 @@
-package com.astrika.checqk.master_controller
+package com.sagar.logutil.checqk.master_controller
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
-import com.astrika.checqk.master_controller.source.ImageDTOConverter
-import com.astrika.checqk.master_controller.source.LongListDTOConverter
-import com.astrika.checqk.master_controller.source.daos.*
-import com.astrika.checqk.master_controller.source.daos.address.*
-import com.astrika.checqk.master_controller.source.daos.discount.*
-import com.astrika.checqk.model.*
-import com.astrika.checqk.model.discount.*
-import com.astrika.checqk.utils.Constants
+import com.sagar.logutil.checqk.master_controller.source.ImageDTOConverter
+import com.sagar.logutil.checqk.master_controller.source.LongListDTOConverter
+import com.sagar.logutil.checqk.master_controller.source.daos.*
+import com.sagar.logutil.checqk.master_controller.source.daos.address.*
+import com.sagar.logutil.checqk.master_controller.source.daos.discount.*
+import com.sagar.logutil.checqk.model.*
+import com.sagar.logutil.checqk.model.discount.*
+import com.sagar.logutil.checqk.utils.Constants
 
 // Annotates class to be a Room Database with a table (entity) of the SubCategory class
 @Database(

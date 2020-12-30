@@ -1,4 +1,4 @@
-package com.astrika.checqk.view.dashboard.viewmodels
+package com.sagar.logutil.checqk.view.dashboard.viewmodels
 
 import android.app.Activity
 import android.app.Application
@@ -9,18 +9,18 @@ import android.os.Looper
 import android.view.View
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.MutableLiveData
-import com.astrika.checqk.model.AddressMasterDTO
-import com.astrika.checqk.model.DisplayCommunicationInfoDTO
-import com.astrika.checqk.model.ImageDTO
-import com.astrika.checqk.model.SubAdminDTO
-import com.astrika.checqk.network.network_utils.IDataSourceCallback
-import com.astrika.checqk.utils.Constants
-import com.astrika.checqk.utils.ErrorCheckUtils
-import com.astrika.checqk.utils.GenericBaseObservable
-import com.astrika.checqk.utils.Utils
-import com.astrika.checqk.utils.location.AddressWithLatLangDTO
-import com.astrika.checqk.view.login.remote.UserRepository
 import com.example.opposfeapp.utils.SingleLiveEvent
+import com.sagar.logutil.checqk.model.AddressMasterDTO
+import com.sagar.logutil.checqk.model.DisplayCommunicationInfoDTO
+import com.sagar.logutil.checqk.model.ImageDTO
+import com.sagar.logutil.checqk.model.SubAdminDTO
+import com.sagar.logutil.checqk.network.network_utils.IDataSourceCallback
+import com.sagar.logutil.checqk.utils.Constants
+import com.sagar.logutil.checqk.utils.ErrorCheckUtils
+import com.sagar.logutil.checqk.utils.GenericBaseObservable
+import com.sagar.logutil.checqk.utils.Utils
+import com.sagar.logutil.checqk.utils.location.AddressWithLatLangDTO
+import com.sagar.logutil.checqk.view.login.remote.UserRepository
 
 class AddNewSubAdminViewModel(
     var activity: Activity,

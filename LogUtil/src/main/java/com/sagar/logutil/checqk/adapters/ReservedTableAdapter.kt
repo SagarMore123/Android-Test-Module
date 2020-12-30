@@ -8,13 +8,13 @@ import android.widget.ImageView
 import android.widget.RelativeLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.astrika.checqk.model.BookingDTO
-import com.astrika.checqk.model.SystemValueMasterDTO
-import com.astrika.checqk.model.TableManagementDTO
-import com.astrika.checqk.network.network_utils.SERVER_IMG_URL
-import com.astrika.checqk.utils.Constants
 import com.bumptech.glide.Glide
 import com.sagar.logutil.R
+import com.sagar.logutil.checqk.model.BookingDTO
+import com.sagar.logutil.checqk.model.SystemValueMasterDTO
+import com.sagar.logutil.checqk.model.TableManagementDTO
+import com.sagar.logutil.checqk.network.network_utils.SERVER_IMG_URL
+import com.sagar.logutil.checqk.utils.Constants
 import com.sagar.logutil.databinding.ReservedTablesCellLayoutBinding
 
 class ReservedTableAdapter(

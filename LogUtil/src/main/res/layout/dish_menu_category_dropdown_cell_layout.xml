@@ -6,7 +6,7 @@
 
         <variable
             name="catalogueCategoryDTO"
-            type="com.astrika.checqk.model.CategoryCatalogueDTO" />
+            type="com.sagar.logutil.checqk.model.CategoryCatalogueDTO" />
 
         <import type="android.view.View"/>
 

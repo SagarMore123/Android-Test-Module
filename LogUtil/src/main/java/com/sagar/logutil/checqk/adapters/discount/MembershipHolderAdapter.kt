@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.astrika.checqk.model.SystemValueMasterDTO
+import com.sagar.logutil.checqk.model.SystemValueMasterDTO
 import com.sagar.logutil.databinding.MembershipHolderItemCellLayoutBinding
 
 class MembershipHolderAdapter(

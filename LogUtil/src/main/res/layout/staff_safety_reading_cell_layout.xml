@@ -9,7 +9,7 @@
 
         <variable
             name="staffSafetyReading"
-            type="com.astrika.checqk.model.StaffSafetyReadingDTO" />
+            type="com.sagar.logutil.checqk.model.StaffSafetyReadingDTO" />
     </data>
 
     <LinearLayout

@@ -1,4 +1,4 @@
-package com.astrika.checqk.view.dashboard.viewmodels
+package com.sagar.logutil.checqk.view.dashboard.viewmodels
 
 import android.app.Activity
 import android.app.Application
@@ -6,20 +6,20 @@ import android.content.SharedPreferences
 import android.view.View
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.MutableLiveData
-import com.astrika.checqk.master_controller.source.MasterRepository
-import com.astrika.checqk.model.AddressMasterDTO
-import com.astrika.checqk.model.CommunicationInfoDTO
-import com.astrika.checqk.model.DisplayCommunicationInfoDTO
-import com.astrika.checqk.model.SocialMediaDTO
-import com.astrika.checqk.network.network_utils.IDataSourceCallback
-import com.astrika.checqk.utils.Constants
-import com.astrika.checqk.utils.ErrorCheckUtils
-import com.astrika.checqk.utils.GenericBaseObservable
-import com.astrika.checqk.utils.Utils
-import com.astrika.checqk.utils.location.AddressWithLatLangDTO
-import com.astrika.checqk.view.login.UserLoginActivity
-import com.astrika.checqk.view.login.remote.UserRepository
 import com.example.opposfeapp.utils.SingleLiveEvent
+import com.sagar.logutil.checqk.master_controller.source.MasterRepository
+import com.sagar.logutil.checqk.model.AddressMasterDTO
+import com.sagar.logutil.checqk.model.CommunicationInfoDTO
+import com.sagar.logutil.checqk.model.DisplayCommunicationInfoDTO
+import com.sagar.logutil.checqk.model.SocialMediaDTO
+import com.sagar.logutil.checqk.network.network_utils.IDataSourceCallback
+import com.sagar.logutil.checqk.utils.Constants
+import com.sagar.logutil.checqk.utils.ErrorCheckUtils
+import com.sagar.logutil.checqk.utils.GenericBaseObservable
+import com.sagar.logutil.checqk.utils.Utils
+import com.sagar.logutil.checqk.utils.location.AddressWithLatLangDTO
+import com.sagar.logutil.checqk.view.login.UserLoginActivity
+import com.sagar.logutil.checqk.view.login.remote.UserRepository
 
 class AddressInfoViewModel(
     var activity: Activity,

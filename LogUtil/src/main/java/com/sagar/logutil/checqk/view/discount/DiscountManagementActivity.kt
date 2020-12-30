@@ -1,4 +1,4 @@
-package com.astrika.checqk.view.discount
+package com.sagar.logutil.checqk.view.discount
 
 import android.os.Bundle
 import android.view.MenuItem
@@ -7,13 +7,13 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
-import com.astrika.checqk.model.discount.DiscountCategoryDTO
-import com.astrika.checqk.utils.Constants
-import com.astrika.checqk.utils.Utils
-import com.astrika.checqk.view.discount.viewmodels.DiscountViewModel
 import com.sagar.logutil.R
 import com.sagar.logutil.checqk.adapters.discount.DiscountCategoriesAdapter
+import com.sagar.logutil.checqk.model.discount.DiscountCategoryDTO
+import com.sagar.logutil.checqk.utils.Constants
+import com.sagar.logutil.checqk.utils.Utils
 import com.sagar.logutil.checqk.view.dashboard.DashboardActivity
+import com.sagar.logutil.checqk.view.discount.viewmodels.DiscountViewModel
 import com.sagar.logutil.databinding.ActivityDiscountManagementBinding
 
 class DiscountManagementActivity : AppCompatActivity(),

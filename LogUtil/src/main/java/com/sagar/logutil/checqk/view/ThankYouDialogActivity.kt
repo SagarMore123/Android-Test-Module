@@ -1,11 +1,11 @@
-package com.astrika.checqk.view
+package com.sagar.logutil.checqk.view
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
-import com.astrika.checqk.utils.Constants
 import com.sagar.logutil.R
+import com.sagar.logutil.checqk.utils.Constants
 import com.sagar.logutil.databinding.ActivityThankYouDialogBinding
 
 class ThankYouDialogActivity : AppCompatActivity() {

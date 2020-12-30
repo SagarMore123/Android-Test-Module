@@ -1,4 +1,4 @@
-package com.astrika.checqk
+package com.sagar.logutil.checqk
 
 import android.os.Bundle
 import android.view.LayoutInflater

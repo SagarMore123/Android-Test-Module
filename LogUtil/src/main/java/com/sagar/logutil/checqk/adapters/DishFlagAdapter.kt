@@ -4,7 +4,7 @@ import android.app.Activity
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.astrika.checqk.model.ProductFlagDTO
+import com.sagar.logutil.checqk.model.ProductFlagDTO
 import com.sagar.logutil.databinding.BasicInfoMastersItemCellLayoutBinding
 
 class DishFlagAdapter(

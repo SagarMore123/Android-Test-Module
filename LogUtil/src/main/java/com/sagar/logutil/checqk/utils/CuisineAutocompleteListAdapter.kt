@@ -1,9 +1,9 @@
-package com.astrika.checqk.utils
+package com.sagar.logutil.checqk.utils
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.astrika.checqk.model.CuisineMasterDTO
+import com.sagar.logutil.checqk.model.CuisineMasterDTO
 import com.sagar.logutil.databinding.AutocompleteTextItemCellLayoutBinding
 
 class CuisineAutocompleteListAdapter(

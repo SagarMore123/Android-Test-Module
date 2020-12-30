@@ -1,4 +1,4 @@
-package com.astrika.checqk.utils
+package com.sagar.logutil.checqk.utils
 
 import android.content.Intent
 import android.content.pm.ActivityInfo
@@ -7,12 +7,12 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
-import com.astrika.checqk.model.*
-import com.astrika.checqk.model.discount.CorporateMembershipOneDashboardDTO
 import com.sagar.logutil.R
 import com.sagar.logutil.checqk.adapters.CommonAutoCompleteListAdapter
 import com.sagar.logutil.checqk.adapters.GroupRoleAutocompleteListAdapter
 import com.sagar.logutil.checqk.adapters.masters.*
+import com.sagar.logutil.checqk.model.*
+import com.sagar.logutil.checqk.model.discount.CorporateMembershipOneDashboardDTO
 import com.sagar.logutil.databinding.ActivityAutocompleteViewBinding
 
 class AutocompleteViewActivity : AppCompatActivity(),

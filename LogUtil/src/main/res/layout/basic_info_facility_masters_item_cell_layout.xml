@@ -9,7 +9,7 @@
 
         <variable
             name="facilityMasterDTO"
-            type="com.astrika.checqk.model.FacilityMasterDTO" />
+            type="com.sagar.logutil.checqk.model.FacilityMasterDTO" />
 
     </data>
 

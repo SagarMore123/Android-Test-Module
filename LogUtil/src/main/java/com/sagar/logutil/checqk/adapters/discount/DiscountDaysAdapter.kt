@@ -8,9 +8,9 @@ import android.widget.LinearLayout
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.astrika.checqk.model.DayDTO
-import com.astrika.checqk.model.DiscountDaysTimingDTO
 import com.sagar.logutil.R
+import com.sagar.logutil.checqk.model.DayDTO
+import com.sagar.logutil.checqk.model.DiscountDaysTimingDTO
 import com.sagar.logutil.databinding.DiscountDayTimingItemCellLayoutBinding
 import com.sagar.logutil.databinding.DiscountTimingItemCellLayoutBinding
 import java.util.*

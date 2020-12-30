@@ -1,4 +1,4 @@
-package com.astrika.checqk.network.network_utils
+package com.sagar.logutil.checqk.network.network_utils
 
 interface IDataSourceCallback<T> {
     fun onDataFound(data: T) {}

@@ -1,4 +1,4 @@
-package com.astrika.checqk.model
+package com.sagar.logutil.checqk.model
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

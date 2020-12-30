@@ -1,14 +1,14 @@
-package com.astrika.checqk.master_controller.source.local
+package com.sagar.logutil.checqk.master_controller.source.local
 
 import androidx.annotation.NonNull
-import com.astrika.checqk.master_controller.source.MasterDataSource
-import com.astrika.checqk.master_controller.source.daos.*
-import com.astrika.checqk.master_controller.source.daos.address.*
-import com.astrika.checqk.master_controller.source.daos.discount.*
-import com.astrika.checqk.master_controller.sync.AppExecutors
-import com.astrika.checqk.model.*
-import com.astrika.checqk.model.discount.*
-import com.astrika.checqk.network.network_utils.IDataSourceCallback
+import com.sagar.logutil.checqk.master_controller.source.MasterDataSource
+import com.sagar.logutil.checqk.master_controller.source.daos.*
+import com.sagar.logutil.checqk.master_controller.source.daos.address.*
+import com.sagar.logutil.checqk.master_controller.source.daos.discount.*
+import com.sagar.logutil.checqk.master_controller.sync.AppExecutors
+import com.sagar.logutil.checqk.model.*
+import com.sagar.logutil.checqk.model.discount.*
+import com.sagar.logutil.checqk.network.network_utils.IDataSourceCallback
 
 class MasterLocalDataSource(
     mAppExecutors: AppExecutors,

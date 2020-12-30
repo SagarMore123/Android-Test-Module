@@ -10,7 +10,7 @@
 
         <variable
             name="dayDTO"
-            type="com.astrika.checqk.model.DayDTO" />
+            type="com.sagar.logutil.checqk.model.DayDTO" />
 
 
     </data>

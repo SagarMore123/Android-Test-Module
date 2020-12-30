@@ -1,4 +1,4 @@
-package com.astrika.checqk.network.network_utils
+package com.sagar.logutil.checqk.network.network_utils
 
 //const val SERVER_URL: String = "http://103.146.177.39:7010/edge-service/"
 //const val SERVER_VAL: String = SERVER_URL + "edge-service/"

@@ -7,7 +7,7 @@
 
         <variable
             name="permissionDTO"
-            type="com.astrika.checqk.model.PermissionDTO" />
+            type="com.sagar.logutil.checqk.model.PermissionDTO" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

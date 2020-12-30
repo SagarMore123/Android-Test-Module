@@ -9,7 +9,7 @@
 
         <variable
             name="famousDishesDTO"
-            type="com.astrika.checqk.model.FamousDishesDTO" />
+            type="com.sagar.logutil.checqk.model.FamousDishesDTO" />
 
     </data>
 

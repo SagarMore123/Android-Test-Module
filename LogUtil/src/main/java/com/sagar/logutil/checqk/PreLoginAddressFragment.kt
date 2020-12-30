@@ -1,4 +1,4 @@
-package com.astrika.checqk
+package com.sagar.logutil.checqk
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,18 +8,18 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
-import com.astrika.checqk.model.*
-import com.astrika.checqk.utils.AutocompleteViewActivity
-import com.astrika.checqk.utils.Constants
-import com.astrika.checqk.utils.CustomProgressBar
-import com.astrika.checqk.utils.Utils
-import com.astrika.checqk.utils.location.AddressWithLatLangDTO
-import com.astrika.checqk.view.dashboard.viewmodels.AddressInfoViewModel
-import com.astrika.checqk.view.login.UserLoginActivity
-import com.astrika.checqk.view.signup.SignUp
 import com.sagar.logutil.R
 import com.sagar.logutil.checqk.adapters.SocialMediaAdapter
 import com.sagar.logutil.checqk.adapters.StringTagsAdapter
+import com.sagar.logutil.checqk.model.*
+import com.sagar.logutil.checqk.utils.AutocompleteViewActivity
+import com.sagar.logutil.checqk.utils.Constants
+import com.sagar.logutil.checqk.utils.CustomProgressBar
+import com.sagar.logutil.checqk.utils.Utils
+import com.sagar.logutil.checqk.utils.location.AddressWithLatLangDTO
+import com.sagar.logutil.checqk.view.dashboard.viewmodels.AddressInfoViewModel
+import com.sagar.logutil.checqk.view.login.UserLoginActivity
+import com.sagar.logutil.checqk.view.signup.SignUp
 import com.sagar.logutil.databinding.FragmentPreLoginAddressBinding
 
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER

@@ -5,9 +5,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.astrika.checqk.model.DashboardDrawerDTO
-import com.astrika.checqk.utils.Constants
 import com.sagar.logutil.R
+import com.sagar.logutil.checqk.model.DashboardDrawerDTO
+import com.sagar.logutil.checqk.utils.Constants
 import com.sagar.logutil.databinding.DashboardDrawerCellLayoutBinding
 
 class DashboardDrawerAdapter(

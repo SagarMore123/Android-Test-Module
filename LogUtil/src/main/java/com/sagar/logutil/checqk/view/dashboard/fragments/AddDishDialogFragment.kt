@@ -1,4 +1,4 @@
-package com.astrika.checqk.view.dashboard.fragments
+package com.sagar.logutil.checqk.view.dashboard.fragments
 
 import android.content.Intent
 import android.graphics.Bitmap
@@ -11,14 +11,14 @@ import android.view.WindowManager
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.DialogFragment
 import androidx.lifecycle.Observer
-import com.astrika.checqk.model.*
-import com.astrika.checqk.utils.Constants
-import com.astrika.checqk.utils.CustomProgressBar
-import com.astrika.checqk.utils.Utils
-import com.astrika.checqk.view.dashboard.viewmodels.AddDishDialogViewModel
 import com.sagar.logutil.R
 import com.sagar.logutil.checqk.adapters.*
 import com.sagar.logutil.checqk.adapters.basicinfo.CuisinesAdapter
+import com.sagar.logutil.checqk.model.*
+import com.sagar.logutil.checqk.utils.Constants
+import com.sagar.logutil.checqk.utils.CustomProgressBar
+import com.sagar.logutil.checqk.utils.Utils
+import com.sagar.logutil.checqk.view.dashboard.viewmodels.AddDishDialogViewModel
 import com.sagar.logutil.databinding.FragmentAddDishDialogBinding
 
 class AddDishDialogFragment : DialogFragment(),

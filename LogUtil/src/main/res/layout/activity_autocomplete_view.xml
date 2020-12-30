@@ -9,7 +9,7 @@
 
         <variable
             name="autocompleteViewModel"
-            type="com.astrika.checqk.utils.AutocompleteViewModel" />
+            type="com.sagar.logutil.checqk.utils.AutocompleteViewModel" />
     </data>
 
     <LinearLayout

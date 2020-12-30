@@ -1,4 +1,4 @@
-package com.astrika.checqk.view.signup.fragments
+package com.sagar.logutil.checqk.view.signup.fragments
 
 import android.content.Intent
 import android.os.Bundle
@@ -9,18 +9,18 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
-import com.astrika.checqk.model.SocialMediaDTO
-import com.astrika.checqk.model.SocialMediaMasterDTO
-import com.astrika.checqk.utils.AutocompleteViewActivity
-import com.astrika.checqk.utils.Constants
-import com.astrika.checqk.utils.CustomProgressBar
-import com.astrika.checqk.utils.Utils
-import com.astrika.checqk.view.ThankYouDialogActivity
-import com.astrika.checqk.view.dashboard.viewmodels.AddressInfoViewModel
-import com.astrika.checqk.view.signup.SignUp
-import com.astrika.checqk.view.signup.viewmodels.OutletCreationViewModel
 import com.sagar.logutil.R
 import com.sagar.logutil.checqk.adapters.SocialMediaAdapter
+import com.sagar.logutil.checqk.model.SocialMediaDTO
+import com.sagar.logutil.checqk.model.SocialMediaMasterDTO
+import com.sagar.logutil.checqk.utils.AutocompleteViewActivity
+import com.sagar.logutil.checqk.utils.Constants
+import com.sagar.logutil.checqk.utils.CustomProgressBar
+import com.sagar.logutil.checqk.utils.Utils
+import com.sagar.logutil.checqk.view.ThankYouDialogActivity
+import com.sagar.logutil.checqk.view.dashboard.viewmodels.AddressInfoViewModel
+import com.sagar.logutil.checqk.view.signup.SignUp
+import com.sagar.logutil.checqk.view.signup.viewmodels.OutletCreationViewModel
 import com.sagar.logutil.databinding.FragmentOutletCreationAdditionalDetailsBinding
 
 

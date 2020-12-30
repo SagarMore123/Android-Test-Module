@@ -6,8 +6,8 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.astrika.checqk.model.GalleryImageCategory
-import com.astrika.checqk.model.ImageDTO
+import com.sagar.logutil.checqk.model.GalleryImageCategory
+import com.sagar.logutil.checqk.model.ImageDTO
 import com.sagar.logutil.databinding.GalleryImagesCellLayoutBinding
 
 

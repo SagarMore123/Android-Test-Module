@@ -1,4 +1,4 @@
-package com.astrika.checqk.model.discount
+package com.sagar.logutil.checqk.model.discount
 
 import java.io.Serializable
 

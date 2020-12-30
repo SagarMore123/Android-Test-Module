@@ -5,7 +5,7 @@
 
         <variable
             name="viewModel"
-            type="com.astrika.checqk.view.dashboard.viewmodels.CustomizationViewModel" />
+            type="com.sagar.logutil.checqk.view.dashboard.viewmodels.CustomizationViewModel" />
 
     </data>
 

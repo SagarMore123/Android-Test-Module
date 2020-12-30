@@ -1,4 +1,4 @@
-package com.astrika.checqk.view.discount.viewmodels
+package com.sagar.logutil.checqk.view.discount.viewmodels
 
 import android.app.Activity
 import android.app.Application
@@ -6,17 +6,17 @@ import android.content.SharedPreferences
 import android.view.View
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.MutableLiveData
-import com.astrika.checqk.master_controller.source.MasterRepository
-import com.astrika.checqk.master_controller.source.daos.SystemValueMasterDao
-import com.astrika.checqk.model.*
-import com.astrika.checqk.model.discount.CorporateMembershipOneDashboardDTO
-import com.astrika.checqk.model.discount.DiscountCategoryDTO
-import com.astrika.checqk.model.discount.OutletDiscountDetailsDTO
-import com.astrika.checqk.model.discount.OutletDiscountMembershipPlanDTO
-import com.astrika.checqk.network.network_utils.IDataSourceCallback
-import com.astrika.checqk.utils.Constants
-import com.astrika.checqk.utils.GenericBaseObservable
-import com.astrika.checqk.view.login.remote.UserRepository
+import com.sagar.logutil.checqk.master_controller.source.MasterRepository
+import com.sagar.logutil.checqk.master_controller.source.daos.SystemValueMasterDao
+import com.sagar.logutil.checqk.model.*
+import com.sagar.logutil.checqk.model.discount.CorporateMembershipOneDashboardDTO
+import com.sagar.logutil.checqk.model.discount.DiscountCategoryDTO
+import com.sagar.logutil.checqk.model.discount.OutletDiscountDetailsDTO
+import com.sagar.logutil.checqk.model.discount.OutletDiscountMembershipPlanDTO
+import com.sagar.logutil.checqk.network.network_utils.IDataSourceCallback
+import com.sagar.logutil.checqk.utils.Constants
+import com.sagar.logutil.checqk.utils.GenericBaseObservable
+import com.sagar.logutil.checqk.view.login.remote.UserRepository
 
 class DiscountViewModel(
     var activity: Activity,

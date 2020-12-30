@@ -1,4 +1,4 @@
-package com.astrika.checqk.view.signup.viewmodels
+package com.sagar.logutil.checqk.view.signup.viewmodels
 
 import android.app.Activity
 import android.app.Application
@@ -6,15 +6,15 @@ import android.content.SharedPreferences
 import android.view.View
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.MutableLiveData
-import com.astrika.checqk.model.DayDTO
-import com.astrika.checqk.model.DaysEnum
-import com.astrika.checqk.model.OutletTimingDTO
-import com.astrika.checqk.model.TimingDTO
-import com.astrika.checqk.network.network_utils.IDataSourceCallback
-import com.astrika.checqk.utils.Constants
-import com.astrika.checqk.utils.GenericBaseObservable
-import com.astrika.checqk.view.login.UserLoginActivity
-import com.astrika.checqk.view.login.remote.UserRepository
+import com.sagar.logutil.checqk.model.DayDTO
+import com.sagar.logutil.checqk.model.DaysEnum
+import com.sagar.logutil.checqk.model.OutletTimingDTO
+import com.sagar.logutil.checqk.model.TimingDTO
+import com.sagar.logutil.checqk.network.network_utils.IDataSourceCallback
+import com.sagar.logutil.checqk.utils.Constants
+import com.sagar.logutil.checqk.utils.GenericBaseObservable
+import com.sagar.logutil.checqk.view.login.UserLoginActivity
+import com.sagar.logutil.checqk.view.login.remote.UserRepository
 
 class TimingViewModel : GenericBaseObservable {
 

@@ -8,7 +8,7 @@
 
         <variable
             name="socialMediaDTO"
-            type="com.astrika.checqk.model.SocialMediaDTO" />
+            type="com.sagar.logutil.checqk.model.SocialMediaDTO" />
 
     </data>
 

@@ -9,7 +9,7 @@
 
         <variable
             name="discountTimingDTO"
-            type="com.astrika.checqk.model.DiscountDaysTimingDTO" />
+            type="com.sagar.logutil.checqk.model.DiscountDaysTimingDTO" />
 
     </data>
 

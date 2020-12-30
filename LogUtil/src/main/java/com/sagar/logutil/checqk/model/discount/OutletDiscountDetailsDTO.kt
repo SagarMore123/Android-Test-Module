@@ -1,6 +1,6 @@
-package com.astrika.checqk.model.discount
+package com.sagar.logutil.checqk.model.discount
 
-import com.astrika.checqk.model.DiscountDaysTimingDTO
+import com.sagar.logutil.checqk.model.DiscountDaysTimingDTO
 import java.io.Serializable
 
 class OutletDiscountDetailsDTO : Serializable {

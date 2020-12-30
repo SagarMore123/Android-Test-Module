@@ -1,14 +1,14 @@
-package com.astrika.checqk.source
+package com.sagar.logutil.checqk.source
 
 import android.content.Context
 import android.content.SharedPreferences
-import com.astrika.checqk.model.*
-import com.astrika.checqk.network.NetworkController
-import com.astrika.checqk.network.network_utils.IDataSourceCallback
-import com.astrika.checqk.network.network_utils.NetworkResponseCallback
-import com.astrika.checqk.utils.Constants
-import com.astrika.checqk.utils.CustomGsonBuilder
 import com.google.gson.reflect.TypeToken
+import com.sagar.logutil.checqk.model.*
+import com.sagar.logutil.checqk.network.NetworkController
+import com.sagar.logutil.checqk.network.network_utils.IDataSourceCallback
+import com.sagar.logutil.checqk.network.network_utils.NetworkResponseCallback
+import com.sagar.logutil.checqk.utils.Constants
+import com.sagar.logutil.checqk.utils.CustomGsonBuilder
 import org.json.JSONObject
 
 class DashboardRemoteDataSource : DashboardDataSource {

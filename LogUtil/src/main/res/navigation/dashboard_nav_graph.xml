@@ -7,12 +7,12 @@
 
     <fragment
         android:id="@+id/PostLoginTimingsFragment"
-        android:name="com.astrika.checqk.view.dashboard.fragments.PostLoginTimingsFragment"
+        android:name="com.sagar.logutil.checqk.view.dashboard.fragments.PostLoginTimingsFragment"
         android:label="@string/first_fragment_label"
         tools:layout="@layout/fragment_post_login_timings" />
     <fragment
         android:id="@+id/BasicInfoFragment"
-        android:name="com.astrika.checqk.view.dashboard.fragments.PostLoginBasicInfoFragment"
+        android:name="com.sagar.logutil.checqk.view.dashboard.fragments.PostLoginBasicInfoFragment"
         android:label="@string/second_fragment_label"
         tools:layout="@layout/fragment_post_login_basic_info" />
     <fragment
@@ -22,17 +22,17 @@
         tools:layout="@layout/fragment_maps" />
     <fragment
         android:id="@+id/PostLoginAddressFragment"
-        android:name="com.astrika.checqk.view.dashboard.fragments.PostLoginAddressFragment"
+        android:name="com.sagar.logutil.checqk.view.dashboard.fragments.PostLoginAddressFragment"
         android:label="fragment_address"
         tools:layout="@layout/fragment_post_login_address" />
     <fragment
         android:id="@+id/galleryImagesFragment"
-        android:name="com.astrika.checqk.view.dashboard.fragments.GalleryImagesFragment"
+        android:name="com.sagar.logutil.checqk.view.dashboard.fragments.GalleryImagesFragment"
         android:label="fragment_restaurant_images"
         tools:layout="@layout/fragment_gallery_images" />
     <fragment
         android:id="@+id/menuImagesFragment"
-        android:name="com.astrika.checqk.view.dashboard.fragments.MenuImagesFragment"
+        android:name="com.sagar.logutil.checqk.view.dashboard.fragments.MenuImagesFragment"
         android:label="fragment_menu_images"
         tools:layout="@layout/fragment_menu_images" />
 
@@ -40,46 +40,46 @@
     <!-- Discount -->
     <fragment
         android:id="@+id/discountFragment"
-        android:name="com.astrika.checqk.view.dashboard.fragments.DiscountFragment"
+        android:name="com.sagar.logutil.checqk.view.dashboard.fragments.DiscountFragment"
         android:label="fragment_discount"
         tools:layout="@layout/fragment_discount" />
 
     <!-- Sub Admin -->
     <fragment
         android:id="@+id/subAdminFragment"
-        android:name="com.astrika.checqk.view.dashboard.fragments.SubAdminFragment"
+        android:name="com.sagar.logutil.checqk.view.dashboard.fragments.SubAdminFragment"
         android:label="fragment_sub_admin"
         tools:layout="@layout/fragment_sub_admin" />
 
     <fragment
         android:id="@+id/menuCategoryFragment"
-        android:name="com.astrika.checqk.view.dashboard.fragments.MenuCategoryFragment"
+        android:name="com.sagar.logutil.checqk.view.dashboard.fragments.MenuCategoryFragment"
         android:label="Menu Category" />
     <fragment
         android:id="@+id/menuSectionFragment"
-        android:name="com.astrika.checqk.view.dashboard.fragments.MenuSectionFragment"
+        android:name="com.sagar.logutil.checqk.view.dashboard.fragments.MenuSectionFragment"
         android:label="Menu Section" />
     <fragment
         android:id="@+id/dishCategoryFragment"
-        android:name="com.astrika.checqk.view.dashboard.fragments.DishCategoryFragment"
+        android:name="com.sagar.logutil.checqk.view.dashboard.fragments.DishCategoryFragment"
         android:label="Dish Category" />
     <fragment
         android:id="@+id/staffUserFragment"
-        android:name="com.astrika.checqk.view.dashboard.fragments.StaffUserFragment"
+        android:name="com.sagar.logutil.checqk.view.dashboard.fragments.StaffUserFragment"
         android:label="StaffUserFragment" />
     <fragment
         android:id="@+id/subAdminAccessRoleFragment"
-        android:name="com.astrika.checqk.view.dashboard.fragments.SubAdminAccessRoleFragment"
+        android:name="com.sagar.logutil.checqk.view.dashboard.fragments.SubAdminAccessRoleFragment"
         android:label="SubAdminAccessRoleFragment" />
     <fragment
         android:id="@+id/reserveTableFragment"
-        android:name="com.astrika.checqk.view.dashboard.fragments.ReserveTableFragment"
+        android:name="com.sagar.logutil.checqk.view.dashboard.fragments.ReserveTableFragment"
         android:label="fragment_reserve_table"
         tools:layout="@layout/fragment_reserve_table" />
 
     <fragment
         android:id="@+id/tableConfigurationFragment"
-        android:name="com.astrika.checqk.view.dashboard.fragments.TableConfigurationFragment"
+        android:name="com.sagar.logutil.checqk.view.dashboard.fragments.TableConfigurationFragment"
         android:label="TableConfigurationFragment"
         tools:layout="@layout/fragment_table_configuration" />
 

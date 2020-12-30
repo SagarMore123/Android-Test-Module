@@ -1,4 +1,4 @@
-package com.astrika.checqk.view.signup.viewmodels
+package com.sagar.logutil.checqk.view.signup.viewmodels
 
 import android.app.Activity
 import android.app.Application
@@ -6,10 +6,10 @@ import android.view.View
 import androidx.databinding.ObservableBoolean
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.MutableLiveData
-import com.astrika.checqk.model.SystemValueMasterDTO
-import com.astrika.checqk.utils.Constants
-import com.astrika.checqk.utils.GenericBaseObservable
-import com.astrika.checqk.view.login.remote.UserRepository
+import com.sagar.logutil.checqk.model.SystemValueMasterDTO
+import com.sagar.logutil.checqk.utils.Constants
+import com.sagar.logutil.checqk.utils.GenericBaseObservable
+import com.sagar.logutil.checqk.view.login.remote.UserRepository
 
 class SignUpViewModel(
     var activity: Activity,

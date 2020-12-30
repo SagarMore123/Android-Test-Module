@@ -6,7 +6,7 @@
     <data>
         <variable
             name="menuCategory"
-            type="com.astrika.checqk.model.CategoryCatalogueDTO" />
+            type="com.sagar.logutil.checqk.model.CategoryCatalogueDTO" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

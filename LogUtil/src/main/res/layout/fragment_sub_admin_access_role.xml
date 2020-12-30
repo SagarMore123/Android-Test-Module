@@ -9,7 +9,7 @@
 
         <variable
             name="viewModel"
-            type="com.astrika.checqk.view.dashboard.viewmodels.SubAdminAccessRoleViewModel" />
+            type="com.sagar.logutil.checqk.view.dashboard.viewmodels.SubAdminAccessRoleViewModel" />
 
     </data>
 

@@ -9,11 +9,11 @@
 
         <variable
             name="galleryImagesViewModel"
-            type="com.astrika.checqk.view.dashboard.viewmodels.GalleryImagesViewModel" />
+            type="com.sagar.logutil.checqk.view.dashboard.viewmodels.GalleryImagesViewModel" />
 
         <variable
             name="menuImagesViewModel"
-            type="com.astrika.checqk.view.dashboard.viewmodels.MenuImagesViewModel" />
+            type="com.sagar.logutil.checqk.view.dashboard.viewmodels.MenuImagesViewModel" />
 
     </data>
 

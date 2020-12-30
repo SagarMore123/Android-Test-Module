@@ -3,7 +3,7 @@ package com.sagar.logutil.checqk.adapters.masters
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.astrika.checqk.model.CountryMasterDTO
+import com.sagar.logutil.checqk.model.CountryMasterDTO
 import com.sagar.logutil.databinding.AutocompleteTextItemCellLayoutBinding
 
 class CountryAutocompleteListAdapter(

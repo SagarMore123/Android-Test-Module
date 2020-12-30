@@ -8,11 +8,11 @@
 
         <variable
             name="outletCreationViewModel"
-            type="com.astrika.checqk.view.signup.viewmodels.OutletCreationViewModel" />
+            type="com.sagar.logutil.checqk.view.signup.viewmodels.OutletCreationViewModel" />
 
         <variable
             name="addressInfoViewModel"
-            type="com.astrika.checqk.view.dashboard.viewmodels.AddressInfoViewModel" />
+            type="com.sagar.logutil.checqk.view.dashboard.viewmodels.AddressInfoViewModel" />
 
 
     </data>

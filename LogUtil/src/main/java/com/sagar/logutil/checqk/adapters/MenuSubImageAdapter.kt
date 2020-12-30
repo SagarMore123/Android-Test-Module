@@ -5,9 +5,9 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.astrika.checqk.model.ImageDTO
-import com.astrika.checqk.network.network_utils.SERVER_IMG_URL
 import com.bumptech.glide.Glide
+import com.sagar.logutil.checqk.model.ImageDTO
+import com.sagar.logutil.checqk.network.network_utils.SERVER_IMG_URL
 import com.sagar.logutil.databinding.MenuImageSubCellLayoutBinding
 
 

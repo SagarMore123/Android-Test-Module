@@ -7,7 +7,7 @@
 
         <variable
             name="commonDto"
-            type="com.astrika.checqk.model.CommonDialogDTO" />
+            type="com.sagar.logutil.checqk.model.CommonDialogDTO" />
     </data>
 
 

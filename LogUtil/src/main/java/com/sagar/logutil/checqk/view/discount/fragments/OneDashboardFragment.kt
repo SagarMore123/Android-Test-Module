@@ -1,4 +1,4 @@
-package com.astrika.checqk.view.discount.fragments
+package com.sagar.logutil.checqk.view.discount.fragments
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,21 +8,21 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
-import com.astrika.checqk.model.DayDTO
-import com.astrika.checqk.model.DiscountDaysTimingDTO
-import com.astrika.checqk.model.SystemValueMasterDTO
-import com.astrika.checqk.model.discount.CorporateMembershipOneDashboardDTO
-import com.astrika.checqk.model.discount.OneDashboardMembershipHolderDTO
-import com.astrika.checqk.model.discount.OutletDiscountDetailsDTO
-import com.astrika.checqk.utils.AutocompleteViewActivity
-import com.astrika.checqk.utils.Constants
-import com.astrika.checqk.utils.CustomProgressBar
-import com.astrika.checqk.utils.Utils
-import com.astrika.checqk.view.discount.viewmodels.OneDashboardDiscountViewModel
 import com.sagar.logutil.R
 import com.sagar.logutil.checqk.adapters.discount.DiscountDaysAdapter
 import com.sagar.logutil.checqk.adapters.discount.MembershipTypeAdapter
 import com.sagar.logutil.checqk.adapters.discount.OneDashboardMembershipHolderAdapter
+import com.sagar.logutil.checqk.model.DayDTO
+import com.sagar.logutil.checqk.model.DiscountDaysTimingDTO
+import com.sagar.logutil.checqk.model.SystemValueMasterDTO
+import com.sagar.logutil.checqk.model.discount.CorporateMembershipOneDashboardDTO
+import com.sagar.logutil.checqk.model.discount.OneDashboardMembershipHolderDTO
+import com.sagar.logutil.checqk.model.discount.OutletDiscountDetailsDTO
+import com.sagar.logutil.checqk.utils.AutocompleteViewActivity
+import com.sagar.logutil.checqk.utils.Constants
+import com.sagar.logutil.checqk.utils.CustomProgressBar
+import com.sagar.logutil.checqk.utils.Utils
+import com.sagar.logutil.checqk.view.discount.viewmodels.OneDashboardDiscountViewModel
 import com.sagar.logutil.databinding.FragmentOneDashboardBinding
 
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER

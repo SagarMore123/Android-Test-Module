@@ -1,4 +1,4 @@
-package com.astrika.checqk.utils.location
+package com.sagar.logutil.checqk.utils.location
 
 import android.Manifest
 import android.app.Activity
@@ -13,14 +13,14 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.app.ActivityCompat.OnRequestPermissionsResultCallback
-import com.astrika.checqk.utils.Constants
-import com.astrika.checqk.utils.Utils
 import com.google.android.gms.common.ConnectionResult
 import com.google.android.gms.common.GoogleApiAvailability
 import com.google.android.gms.common.api.GoogleApiClient
 import com.google.android.gms.common.api.GoogleApiClient.ConnectionCallbacks
 import com.google.android.gms.common.api.GoogleApiClient.OnConnectionFailedListener
 import com.google.android.gms.location.*
+import com.sagar.logutil.checqk.utils.Constants
+import com.sagar.logutil.checqk.utils.Utils
 import java.io.IOException
 import java.util.*
 

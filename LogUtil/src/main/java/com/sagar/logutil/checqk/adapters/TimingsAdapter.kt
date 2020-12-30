@@ -9,9 +9,9 @@ import android.widget.LinearLayout
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.astrika.checqk.model.DayDTO
-import com.astrika.checqk.model.TimingDTO
 import com.sagar.logutil.R
+import com.sagar.logutil.checqk.model.DayDTO
+import com.sagar.logutil.checqk.model.TimingDTO
 import com.sagar.logutil.databinding.DayTimingListItemCellLayoutBinding
 import com.sagar.logutil.databinding.TimingItemCellLayoutBinding
 import java.util.*

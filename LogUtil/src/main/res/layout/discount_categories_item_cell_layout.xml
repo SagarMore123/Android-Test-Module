@@ -8,7 +8,7 @@
 
         <variable
             name="outletDiscountCategoryDTO"
-            type="com.astrika.checqk.model.discount.DiscountCategoryDTO" />
+            type="com.sagar.logutil.checqk.model.discount.DiscountCategoryDTO" />
 
     </data>
 

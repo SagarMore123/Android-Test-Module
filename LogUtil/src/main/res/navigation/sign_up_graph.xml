@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/PreLoginTimingsFragment"
-        android:name="com.astrika.checqk.view.signup.fragments.PreLoginTimingsFragment"
+        android:name="com.sagar.logutil.checqk.view.signup.fragments.PreLoginTimingsFragment"
         android:label=""
         tools:layout="@layout/fragment_pre_login_timings">
         <action
@@ -17,7 +17,7 @@
 
     <fragment
         android:id="@+id/PreLoginBasicInfoFragment"
-        android:name="com.astrika.checqk.view.signup.fragments.PreLoginBasicInfoFragment"
+        android:name="com.sagar.logutil.checqk.view.signup.fragments.PreLoginBasicInfoFragment"
         android:label=""
         tools:layout="@layout/fragment_pre_login_basic_info">
         <action
@@ -29,12 +29,12 @@
     </fragment>
     <fragment
         android:id="@+id/PreLoginAddressFragment"
-        android:name="com.astrika.checqk.PreLoginAddressFragment"
+        android:name="com.sagar.logutil.checqk.PreLoginAddressFragment"
         android:label="fragment_pre_login_address"
         tools:layout="@layout/fragment_pre_login_address" />
     <fragment
         android:id="@+id/PreLoginGalleryAndMenuFragment"
-        android:name="com.astrika.checqk.view.signup.fragments.PreLoginGalleryAndMenuFragment"
+        android:name="com.sagar.logutil.checqk.view.signup.fragments.PreLoginGalleryAndMenuFragment"
         android:label="fragment_pre_login_gallery_and_menu"
         tools:layout="@layout/fragment_pre_login_gallery_and_menu">
         <action
@@ -43,7 +43,7 @@
     </fragment>
     <fragment
         android:id="@+id/outletCreationFragment"
-        android:name="com.astrika.checqk.view.signup.fragments.OutletCreationFragment"
+        android:name="com.sagar.logutil.checqk.view.signup.fragments.OutletCreationFragment"
         android:label="fragment_outlet_creation"
         tools:layout="@layout/fragment_outlet_creation">
         <action
@@ -52,7 +52,7 @@
     </fragment>
     <fragment
         android:id="@+id/outletCreationAdditionalDetailsFragment"
-        android:name="com.astrika.checqk.view.signup.fragments.OutletCreationAdditionalDetailsFragment"
+        android:name="com.sagar.logutil.checqk.view.signup.fragments.OutletCreationAdditionalDetailsFragment"
         android:label="fragment_outlet_creation_addtional_details"
         tools:layout="@layout/fragment_outlet_creation_additional_details">
         <action
@@ -61,7 +61,7 @@
     </fragment>
     <fragment
         android:id="@+id/preLoginSafetyMeasuresFragment"
-        android:name="com.astrika.checqk.PreLoginSafetyMeasuresFragment"
+        android:name="com.sagar.logutil.checqk.PreLoginSafetyMeasuresFragment"
         android:label="fragment_pre_login_safety_measures"
         tools:layout="@layout/fragment_pre_login_safety_measures" />
 

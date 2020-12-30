@@ -9,7 +9,7 @@
 
         <variable
             name="closedDateDTO"
-            type="com.astrika.checqk.model.ClosedDatesDTO" />
+            type="com.sagar.logutil.checqk.model.ClosedDatesDTO" />
 
     </data>
 

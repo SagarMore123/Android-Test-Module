@@ -9,7 +9,7 @@
 
         <variable
             name="discountViewModel"
-            type="com.astrika.checqk.view.discount.viewmodels.DiscountViewModel" />
+            type="com.sagar.logutil.checqk.view.discount.viewmodels.DiscountViewModel" />
 
     </data>
 

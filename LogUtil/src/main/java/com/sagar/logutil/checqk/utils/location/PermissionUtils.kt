@@ -1,4 +1,4 @@
-package com.astrika.checqk.utils.location
+package com.sagar.logutil.checqk.utils.location
 
 import android.app.Activity
 import android.app.AlertDialog

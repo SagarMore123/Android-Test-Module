@@ -1,4 +1,4 @@
-package com.astrika.checqk.utils
+package com.sagar.logutil.checqk.utils
 
 import android.app.Activity
 import android.view.MotionEvent
@@ -8,10 +8,10 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.databinding.BindingAdapter
 import androidx.lifecycle.MutableLiveData
-import com.astrika.checqk.network.network_utils.SERVER_IMG_URL
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.sagar.logutil.R
+import com.sagar.logutil.checqk.network.network_utils.SERVER_IMG_URL
 
 
 class BindingAdapter {

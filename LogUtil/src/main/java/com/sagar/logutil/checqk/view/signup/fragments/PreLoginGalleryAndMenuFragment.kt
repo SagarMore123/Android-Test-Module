@@ -1,4 +1,4 @@
-package com.astrika.checqk.view.signup.fragments
+package com.sagar.logutil.checqk.view.signup.fragments
 
 import android.app.Activity
 import android.content.Intent
@@ -12,17 +12,17 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
-import com.astrika.checqk.model.CatalogueImageCategory
-import com.astrika.checqk.model.GalleryImageCategory
-import com.astrika.checqk.model.ImageDTO
-import com.astrika.checqk.utils.Constants
-import com.astrika.checqk.utils.CustomProgressBar
-import com.astrika.checqk.utils.Utils
-import com.astrika.checqk.view.dashboard.viewmodels.GalleryImagesViewModel
-import com.astrika.checqk.view.dashboard.viewmodels.MenuImagesViewModel
-import com.astrika.checqk.view.signup.SignUp
 import com.sagar.logutil.R
 import com.sagar.logutil.checqk.adapters.*
+import com.sagar.logutil.checqk.model.CatalogueImageCategory
+import com.sagar.logutil.checqk.model.GalleryImageCategory
+import com.sagar.logutil.checqk.model.ImageDTO
+import com.sagar.logutil.checqk.utils.Constants
+import com.sagar.logutil.checqk.utils.CustomProgressBar
+import com.sagar.logutil.checqk.utils.Utils
+import com.sagar.logutil.checqk.view.dashboard.viewmodels.GalleryImagesViewModel
+import com.sagar.logutil.checqk.view.dashboard.viewmodels.MenuImagesViewModel
+import com.sagar.logutil.checqk.view.signup.SignUp
 import com.sagar.logutil.databinding.FragmentPreLoginGalleryAndMenuBinding
 import com.theartofdev.edmodo.cropper.CropImage
 

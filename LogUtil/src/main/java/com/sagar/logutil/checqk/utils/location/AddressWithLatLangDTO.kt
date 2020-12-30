@@ -1,4 +1,4 @@
-package com.astrika.checqk.utils.location
+package com.sagar.logutil.checqk.utils.location
 
 import java.io.Serializable
 

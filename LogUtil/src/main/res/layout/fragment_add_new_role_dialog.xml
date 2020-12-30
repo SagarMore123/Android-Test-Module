@@ -9,7 +9,7 @@
 
         <variable
             name="viewModel"
-            type="com.astrika.checqk.view.dashboard.viewmodels.AddNewRoleDialogViewModel" />
+            type="com.sagar.logutil.checqk.view.dashboard.viewmodels.AddNewRoleDialogViewModel" />
 
 
     </data>

@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.astrika.checqk.model.SystemValueMasterDTO
+import com.sagar.logutil.checqk.model.SystemValueMasterDTO
 import com.sagar.logutil.databinding.PageIndicatorItemCellLayoutBinding
 
 class PageIndicatorAdapter(

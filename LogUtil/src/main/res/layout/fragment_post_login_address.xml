@@ -10,7 +10,7 @@
 
         <variable
             name="addressInfoViewModel"
-            type="com.astrika.checqk.view.dashboard.viewmodels.AddressInfoViewModel" />
+            type="com.sagar.logutil.checqk.view.dashboard.viewmodels.AddressInfoViewModel" />
 
     </data>
 

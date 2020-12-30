@@ -6,7 +6,7 @@
 
         <variable
             name="viewModel"
-            type="com.astrika.checqk.view.dashboard.viewmodels.MenuImagesViewModel" />
+            type="com.sagar.logutil.checqk.view.dashboard.viewmodels.MenuImagesViewModel" />
 
         <import type="android.view.View" />
 

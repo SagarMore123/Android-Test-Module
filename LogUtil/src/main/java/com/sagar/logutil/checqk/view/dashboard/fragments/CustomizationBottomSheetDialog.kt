@@ -1,4 +1,4 @@
-package com.astrika.checqk.view.dashboard.fragments
+package com.sagar.logutil.checqk.view.dashboard.fragments
 
 import android.content.Context
 import android.os.Bundle
@@ -6,11 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
-import com.astrika.checqk.utils.CustomProgressBar
-import com.astrika.checqk.utils.Utils
-import com.astrika.checqk.view.dashboard.viewmodels.CustomizationViewModel
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.sagar.logutil.R
+import com.sagar.logutil.checqk.utils.CustomProgressBar
+import com.sagar.logutil.checqk.utils.Utils
+import com.sagar.logutil.checqk.view.dashboard.viewmodels.CustomizationViewModel
 import com.sagar.logutil.databinding.CustomizationBottomSheetDialogBinding
 
 class CustomizationBottomSheetDialog(fragment: AddDishDialogFragment) : BottomSheetDialogFragment() {

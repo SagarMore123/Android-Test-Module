@@ -1,10 +1,10 @@
-package com.astrika.checqk.view.login.remote
+package com.sagar.logutil.checqk.view.login.remote
 
 import android.app.Application
-import com.astrika.checqk.model.*
-import com.astrika.checqk.model.discount.CorporateMembershipOneDashboardDTO
-import com.astrika.checqk.model.discount.OutletDiscountDetailsDTO
-import com.astrika.checqk.network.network_utils.IDataSourceCallback
+import com.sagar.logutil.checqk.model.*
+import com.sagar.logutil.checqk.model.discount.CorporateMembershipOneDashboardDTO
+import com.sagar.logutil.checqk.model.discount.OutletDiscountDetailsDTO
+import com.sagar.logutil.checqk.network.network_utils.IDataSourceCallback
 
 class UserRepository(private var mUserDataSource: UserDataSource?) : UserDataSource {
 

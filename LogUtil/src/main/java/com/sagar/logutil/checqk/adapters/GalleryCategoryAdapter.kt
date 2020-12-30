@@ -4,7 +4,7 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.astrika.checqk.model.GalleryImageCategory
+import com.sagar.logutil.checqk.model.GalleryImageCategory
 import com.sagar.logutil.databinding.CategoryCellLayoutBinding
 
 

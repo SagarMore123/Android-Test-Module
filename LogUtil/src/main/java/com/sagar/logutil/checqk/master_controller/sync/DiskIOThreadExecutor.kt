@@ -1,4 +1,4 @@
-package com.astrika.checqk.master_controller.sync
+package com.sagar.logutil.checqk.master_controller.sync
 
 import java.util.concurrent.Executor
 import java.util.concurrent.Executors

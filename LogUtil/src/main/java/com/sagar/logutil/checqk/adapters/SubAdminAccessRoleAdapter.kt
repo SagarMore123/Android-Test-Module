@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.astrika.checqk.model.AccessRoleDTO
+import com.sagar.logutil.checqk.model.AccessRoleDTO
 import com.sagar.logutil.databinding.SubAdminAccessRoleListCellLayoutBinding
 
 

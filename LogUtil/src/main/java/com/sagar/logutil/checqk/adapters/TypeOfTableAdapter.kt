@@ -5,10 +5,10 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.astrika.checqk.model.SystemValueMasterDTO
-import com.astrika.checqk.network.network_utils.SERVER_IMG_URL
-import com.astrika.checqk.utils.Constants
 import com.bumptech.glide.Glide
+import com.sagar.logutil.checqk.model.SystemValueMasterDTO
+import com.sagar.logutil.checqk.network.network_utils.SERVER_IMG_URL
+import com.sagar.logutil.checqk.utils.Constants
 import com.sagar.logutil.databinding.TypeOfTableCellLayoutBinding
 
 class TypeOfTableAdapter(val context:Context, val listener: OnItemClickListener) :

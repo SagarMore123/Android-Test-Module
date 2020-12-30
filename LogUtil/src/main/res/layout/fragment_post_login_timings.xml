@@ -9,11 +9,11 @@
 
         <variable
             name="timingViewModel"
-            type="com.astrika.checqk.view.signup.viewmodels.TimingViewModel" />
+            type="com.sagar.logutil.checqk.view.signup.viewmodels.TimingViewModel" />
 
         <variable
             name="closedDatesViewModel"
-            type="com.astrika.checqk.view.dashboard.viewmodels.ClosedDatesViewModel" />
+            type="com.sagar.logutil.checqk.view.dashboard.viewmodels.ClosedDatesViewModel" />
 
 
     </data>

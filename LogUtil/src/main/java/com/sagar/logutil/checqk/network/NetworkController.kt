@@ -1,16 +1,16 @@
-package com.astrika.checqk.network
+package com.sagar.logutil.checqk.network
 
 import android.content.Context
-import com.astrika.checqk.model.*
-import com.astrika.checqk.model.discount.OutletDiscountDetailsDTO
-import com.astrika.checqk.network.network_utils.IDataSourceCallback
-import com.astrika.checqk.network.network_utils.NetworkResponseCallback
-import com.astrika.checqk.network.network_utils.NetworkUtils.Companion.HTTP_RETROFIT_FAILURE
-import com.astrika.checqk.network.network_utils.NetworkUtils.Companion.HTTP_SUCCESS
-import com.astrika.checqk.network.network_utils.NetworkUtils.Companion.getStringResponseFromRaw
-import com.astrika.checqk.utils.Constants
-import com.astrika.checqk.utils.CustomGsonBuilder
 import com.sagar.logutil.R
+import com.sagar.logutil.checqk.model.*
+import com.sagar.logutil.checqk.model.discount.OutletDiscountDetailsDTO
+import com.sagar.logutil.checqk.network.network_utils.IDataSourceCallback
+import com.sagar.logutil.checqk.network.network_utils.NetworkResponseCallback
+import com.sagar.logutil.checqk.network.network_utils.NetworkUtils.Companion.HTTP_RETROFIT_FAILURE
+import com.sagar.logutil.checqk.network.network_utils.NetworkUtils.Companion.HTTP_SUCCESS
+import com.sagar.logutil.checqk.network.network_utils.NetworkUtils.Companion.getStringResponseFromRaw
+import com.sagar.logutil.checqk.utils.Constants
+import com.sagar.logutil.checqk.utils.CustomGsonBuilder
 import okhttp3.ResponseBody
 import org.json.JSONObject
 import retrofit2.Call

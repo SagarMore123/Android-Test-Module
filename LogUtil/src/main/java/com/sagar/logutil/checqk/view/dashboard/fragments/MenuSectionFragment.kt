@@ -1,4 +1,4 @@
-package com.astrika.checqk.view.dashboard.fragments
+package com.sagar.logutil.checqk.view.dashboard.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,14 +10,14 @@ import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.astrika.checqk.model.CatalogueSectionDTO
-import com.astrika.checqk.utils.CustomProgressBar
-import com.astrika.checqk.utils.Utils
-import com.astrika.checqk.view.dashboard.viewmodels.MenuSectionViewModel
 import com.sagar.logutil.R
 import com.sagar.logutil.checqk.adapters.DragListItemAdapter
 import com.sagar.logutil.checqk.adapters.MenuCategoryHorizontalListAdapter
 import com.sagar.logutil.checqk.adapters.MenuSectionListAdapter
+import com.sagar.logutil.checqk.model.CatalogueSectionDTO
+import com.sagar.logutil.checqk.utils.CustomProgressBar
+import com.sagar.logutil.checqk.utils.Utils
+import com.sagar.logutil.checqk.view.dashboard.viewmodels.MenuSectionViewModel
 import com.sagar.logutil.databinding.FragmentMenuSectionBinding
 
 class MenuSectionFragment : Fragment(),

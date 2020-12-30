@@ -2,9 +2,9 @@ package com.sagar.logutil.checqk
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.astrika.checqk.model.GalleryImageCategory
 import com.sagar.logutil.R
 import com.sagar.logutil.checqk.adapters.GalleryImageAdapter
+import com.sagar.logutil.checqk.model.GalleryImageCategory
 
 class MainActivity : AppCompatActivity(){
 

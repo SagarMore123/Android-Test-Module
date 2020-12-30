@@ -6,7 +6,7 @@
 
         <variable
             name="menuImageCategory"
-            type="com.astrika.checqk.model.CatalogueImageCategory" />
+            type="com.sagar.logutil.checqk.model.CatalogueImageCategory" />
 
     </data>
 

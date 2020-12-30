@@ -6,7 +6,7 @@
 
         <variable
             name="galleryImageCategory"
-            type="com.astrika.checqk.model.GalleryImageCategory" />
+            type="com.sagar.logutil.checqk.model.GalleryImageCategory" />
 
         <import type="android.view.View"/>
 

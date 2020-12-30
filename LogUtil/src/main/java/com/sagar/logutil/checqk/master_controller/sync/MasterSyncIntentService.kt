@@ -1,8 +1,8 @@
-package com.astrika.checqk.master_controller.sync
+package com.sagar.logutil.checqk.master_controller.sync
 
 import android.app.IntentService
 import android.content.Intent
-import com.astrika.checqk.utils.Constants
+import com.sagar.logutil.checqk.utils.Constants
 
 class MasterSyncIntentService : IntentService("MasterSyncIntentService") {
 

@@ -7,7 +7,7 @@
         <import type="android.view.View"/>
         <variable
             name="dishDetails"
-            type="com.astrika.checqk.model.ProductDetailsDTO" />
+            type="com.sagar.logutil.checqk.model.ProductDetailsDTO" />
     </data>
 
     <com.guanaj.easyswipemenulibrary.EasySwipeMenuLayout

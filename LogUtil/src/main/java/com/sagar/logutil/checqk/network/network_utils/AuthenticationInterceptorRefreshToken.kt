@@ -1,7 +1,7 @@
-package com.astrika.checqk.network.network_utils
+package com.sagar.logutil.checqk.network.network_utils
 
 import android.content.Context
-import com.astrika.checqk.utils.Constants
+import com.sagar.logutil.checqk.utils.Constants
 import okhttp3.Interceptor
 import okhttp3.Response
 

@@ -10,11 +10,11 @@
 
         <variable
             name="dayDTO"
-            type="com.astrika.checqk.model.DayDTO" />
+            type="com.sagar.logutil.checqk.model.DayDTO" />
 
         <variable
             name="discountDaysTimingDTO"
-            type="com.astrika.checqk.model.DiscountDaysTimingDTO" />
+            type="com.sagar.logutil.checqk.model.DiscountDaysTimingDTO" />
 
         <variable
             name="activity"
